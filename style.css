@@ -693,17 +693,40 @@ body {
 }
 /*Our Team*/
 .background {
-    background-image: url('images/KTTBDC_Logo.png');
-    background-size: cover;
-    opacity: O.1;
-    background-position: center;
-    margin-top: 90;
-    padding-bottom: 150px; /* Ensure the background covers the full viewport height */
+    position: relative; /* Required for pseudo-element positioning */
+    margin-top: 90px;
+    padding-bottom: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative; /* Ensure the wave is positioned relative to this container */
+    overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+    /*background-image: url('images/KTTBDC_Logo.png');
+    background-size: cover;
+    opacity: 0.1;
+    background-position: center;
+    margin-top: 90;
+    padding-bottom: 150px; /* Ensure the background covers the full viewport height */
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;  /*Ensure the wave is positioned relative to this container */
+}
+
+.background::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* Position the overlay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/KTTBDC_Logo.png');
+    /*background-image: inherit; /* Use the same background image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* Set the opacity of the background image only */
+    z-index: -1; /* Place it behind the content */
 }
 
 .content {
