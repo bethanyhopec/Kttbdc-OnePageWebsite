@@ -10,8 +10,9 @@ body {
 /* Header */
 header {
     background: white;
-    padding: 15px 0;
+    padding: 0px 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px #09323F solid;
     position: fixed;
     width: 100%;
     top: 0;
@@ -23,7 +24,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0px 20px;
     background: white;
     
 }
@@ -31,16 +32,25 @@ header {
 /* Logo + Text Container */
 .logo-container {
     display: flex;
-    align-items: center;
-    gap: 15px; /* Space between logo and text */
+    align-items: left;
+    gap: -50px; /* Reduced gap to bring the text closer */
 }
 
 /* Logo Image */
 .logo-container img {
-    height: 50px; /* Adjust size as needed */
+    height: 70px;
+    margin-left: -10%; /* Slight left margin */
+    margin-top: -25px; /* Adjusted to move the logo slightly higher */
 }
 
 /* Text Beside Logo */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+}
+
 .logo-text h1 {
     font-size: 1.8rem;
     font-weight: 700;
@@ -48,13 +58,18 @@ header {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0;
+    margin-left: -5%;
+    margin-top: -5px; /* Moves text slightly higher */
+    line-height: 1; /* Ensures text is not too spaced out */
 }
 
 .logo-text p {
-    font-size: 0.3rem;
+    font-size: 0.27rem; /* Increased for better readability */
     font-weight: 400;
     color: #004996;
     margin: 0;
+    margin-left: -5%;
+    margin-top: -2px; /* Slightly raises paragraph text */
 }
 
 /* Navigation Menu */
@@ -239,77 +254,79 @@ body {
 }
 
 /* Component Units Section */
-.component-units {
-    text-align: center;
-    padding: 100px 100px;
-    background-color: #f8f9fa;
-    position: relative;
-    overflow: hidden;
+.background-container {
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    background: url('images/components.png') no-repeat center center/cover;
 }
 
-/* Background Image */
-.component-units::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+.overlay {
     width: 100%;
     height: 100%;
-    background: "images/components.png" ;
-    opacity: 0.2; /* Adjust transparency */
-    z-index: -1;
+    background: linear-gradient(to bottom, rgba(255, 255, 251, 0.5), rgba(255, 255, 255, 0));
 }
 
-
-.component-units h2 {
-    font-size: 2rem;
-    color: #004996;
-    margin-bottom: 20px;
+.content {
     position: relative;
-    z-index: 2;
+    text-align: center;
+    margin-top: 100px;
 }
 
-.unit-container {
+h1 {
+    font-size: 84px;
+    color: #1e4666;
+    font-weight: bold;
+}
+
+.divider {
+    width: 580px;
+    height: 3px;
+    background-color: yellow;
+    margin: 10px auto;
+}
+
+.logo-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    position: relative;
-    z-index: 2;
+    gap: 50px;
+    margin-top: 50px;
 }
 
-.unit {
-    background: white;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+.logo-card {
     text-align: center;
-}
-
-.unit img {
-    width: 200px;
-    height: auto;
-    border-radius: 15px;
-}
-
-.unit-btn {
-    display: block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: white;
-    border: 2px solid #f8af18;
-    color: #004996;
-    text-align: center;
-    position: center;
-    font-weight: bold;
-    border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.unit-btn:hover {
-    background: #f8af18;
-    color: #004996;
+/* Ensuring Circular Image */
+.logo-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* Ensures the image is cropped to fit in a perfect circle */
+    border-radius: 10;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    border: 3px solid #dcae1d;
+    background-color: white;
+    color: #143147;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo-card:hover button {
+    background-color: #dcae1d;
+    font-weight: bold;
 }
 
 /* Pop-up Styles */
@@ -321,6 +338,7 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -331,6 +349,7 @@ body {
     width: 400px;
     border-radius: 10px;
     text-align: center;
+    position: relative;
 }
 
 .close-btn {
@@ -340,6 +359,7 @@ body {
     font-size: 20px;
     cursor: pointer;
 }
+
 
 /* About Us Section */
 .about-us {
@@ -693,15 +713,7 @@ body {
 }
 /*Our Team*/
 .background {
-    position: relative; /* Required for pseudo-element positioning */
-    margin-top: 90px;
-    padding-bottom: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
-    /*background-image: url('images/KTTBDC_Logo.png');
+    background-image: url('images/KTTBDC_Logo.png');
     background-size: cover;
     opacity: 0.1;
     background-position: center;
@@ -711,22 +723,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;  /*Ensure the wave is positioned relative to this container */
-}
-
-.background::before {
-    content: ""; /* Required for pseudo-elements */
-    position: absolute; /* Position the overlay */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('images/KTTBDC_Logo.png');
-    /*background-image: inherit; /* Use the same background image */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.1; /* Set the opacity of the background image only */
-    z-index: -1; /* Place it behind the content */
+    position: relative; /* Ensure the wave is positioned relative to this container */
 }
 
 .content {
@@ -811,6 +808,7 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
+
 
 /*Partner*/
 .partners-section {

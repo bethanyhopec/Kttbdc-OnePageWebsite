@@ -18,24 +18,6 @@ function openPopup(id) {
 function closePopup(id) {
     document.getElementById(id).style.display = "none";
 }
-
-// Close popups when clicking outside
-window.onclick = function(event) {
-    let popups = document.querySelectorAll(".popup");
-    popups.forEach(popup => {
-        if (event.target === popup) {
-            popup.style.display = "none";
-        }
-    });
-};
-document.querySelectorAll('.dropdown > a').forEach(dropdown => {
-    dropdown.addEventListener('click', function (event) {
-        event.preventDefault(); // Prevents link redirection
-        let menu = this.nextElementSibling;
-        menu.classList.toggle('show');
-    });
-});
-
 // Close dropdown when clicking outside
 document.addEventListener('click', function (event) {
     let dropdowns = document.querySelectorAll('.dropdown-menu');
@@ -54,4 +36,21 @@ document.addEventListener("DOMContentLoaded", function () {
         carousel.appendChild(partners[0]); 
         partners.push(partners.shift());
     }, 2000); 
+
+});
+
+// Ensure pop-ups remain hidden on page load
+document.addEventListener("DOMContentLoaded", function () {
+    // Hide all pop-ups initially
+    document.querySelectorAll(".popup").forEach((popup) => {
+        popup.style.display = "none";
+    });
+
+    // Attach event listeners to buttons inside .logo-card
+    document.querySelectorAll(".logo-card button").forEach((button) => {
+        button.addEventListener("click", function () {
+            let unit = this.innerText.toLowerCase(); // Convert button text to lowercase
+            openPopup(`${unit}-popup`);
+        });
+    });
 });
