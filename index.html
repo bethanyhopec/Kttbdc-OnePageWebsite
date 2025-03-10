@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTTBDC</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="header-container">
+        <div class="logo-container">
+            <img src="images/KTTBDC_Logo.png" alt="KTTBDC Logo">
+            <div class="logo-text">
+                <h1>KTTBDC</h1>
+                <p>Knowledge Technology Transfer & Business Development</p>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about-us">About</a></li> 
+                <li><a href="#contact-us">Contact Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Explore ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#component-units">Component Units</a></li> 
+                        <li><a href="#our-objectives">Our Objectives</a></li>
+                        <li><a href="#our-goals">Our Goals</a></li>
+                        <li><a href="#our-services">Our Services</a></li>
+                        <li><a href="#our-team">Our Team</a></li>
+                        <li><a href="#partners">Partners & Collaborators</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1><span>KTTBDC</span></h1>
+        <p>Knowledge Technology Transfer and Business Development Center</p>
+        <a href="#component-units" class="btn">Discover More</a> <!-- Anchor link -->
+    </div>
+    <div class="hero-image">
+        <img src="images/homepage-icon.png" alt="Lightbulb Innovation">
+    </div>
+</section>
+
+
+<!-- Component Units Section -->
+<section id="component-units" class="component-units">
+    <h2>COMPONENT UNITS</h2>
+    <div class="unit-container">
+        <div class="unit">
+            <img src="images/itso.png" alt="ITSO">
+            <button class="unit-btn" onclick="openPopup('itso-popup')">ITSO</button>
+        </div>
+        <div class="unit">
+            <img src="images/ktto.png" alt="KTTO">
+            <button class="unit-btn" onclick="openPopup('ktto-popup')">KTTO</button>
+        </div>
+        <div class="unit">
+            <img src="images/binhi.png" alt="BINHI">
+            <button class="unit-btn" onclick="openPopup('binhi-popup')">BINHI</button>
+        </div>
+    </div>
+</section>
+
+<!-- Pop-up Modals -->
+<div id="itso-popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup('itso-popup')">&times;</span>
+        <h3>Innovation and Technology Support Office (ITSO)</h3>
+        <p>ITSO focuses on intellectual property management and technology transfer at WVSU.</p>
+    </div>
+</div>
+
+<div id="ktto-popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup('ktto-popup')">&times;</span>
+        <h3>Knowledge and Technology Transfer Office (KTTO)</h3>
+        <p>KTTO helps in transferring university research into viable commercial and societal applications.</p>
+    </div>
+</div>
+
+<div id="binhi-popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup('binhi-popup')">&times;</span>
+        <h3>BINHI Incubation Hub</h3>
+        <p>BINHI serves as an incubation hub for startups and innovative projects.</p>
+    </div>
+</div>
+
+<!-- About Us Section -->
+<section id="about-us" class="about-us">
+    <div class="about-container">
+        <div class="about-content">
+            <h3>MISSION</h3>
+            <p>
+                Dedicated to fostering a scientific, innovative, collaborative, and entrepreneurial culture at 
+                West Visayas State University (WVSU), we strive to meet the growing demand for advancing 
+                university research and development, facilitating the commercialization of emerging technologies, 
+                and enhancing their societal impact.
+            </p>
+            <h3>VISION</h3>
+            <p>
+                A thriving ecosystem at West Visayas State University (WVSU) that leads in scientific innovation 
+                and technology transfer, empowering communities through effective commercialization and 
+                sustainable development.
+            </p>
+        </div>
+        <div class="about-image">
+            <h2>ABOUT US</h2>
+            <img src="images/KTTBDC_Logo.png" alt="About Us Icon">
+        </div>
+    </div>
+</section>
+
+<!-- Our Goals Section -->
+<section id="our-goals" class="our-goals">
+    <h2>OUR GOALS</h2>
+    <div class="goals-container">
+        <!-- First Goal (Text Left, Image Box Right) -->
+        <div class="goal">
+            <p>To develop and nurture a more scientific, innovative, collaborative, and entrepreneurial culture of WVSU.</p>
+            <div class="goal-box">
+                <img src="images/Icon-goals1.png" alt="Innovation Culture">
+            </div>
+        </div>
+        <!-- Second Goal (Image Box Left, Text Right) -->
+        <div class="goal">
+            <div class="goal-box">
+                <img src="images/icon-goals2.png" alt="Research & Development">
+            </div>
+            <p>Intends to progressively address the increasing demand to advance university research and development, and other potential technologies developed for the benefit of society.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Our Objectives Section -->
+<section id="our-objectives" class="our-objectives">
+    <h2>OUR OBJECTIVES</h2>
+    <div class="objectives-container">
+        <div class="objective">
+            <p>To harmonize the Innovation and Technology Support Office (ITSO), the BMIH Technology Business Incubator (TBI), and the Knowledge and Technology Transfer Office (KTTO).</p>
+            <img class="objective-icon" src="images/icon-obj.1.png" alt="Innovation Support">
+        </div>
+        <div class="objective">
+            <img class="objective-icon" src="images/icon-obj.2.png" alt="Policies and Processes">
+            <p>To establish policies and processes engaging technology transfer and R&D commercialization initiatives.</p>
+        </div>
+        <div class="objective">
+            <p>To implement strategies and protocols to increase the number of commercially viable technologies.</p>
+            <img class="objective-icon" src="images/icon-obj.3.png" alt="Strategies and Protocols">
+        </div>
+        <div class="objective">
+            <img class="objective-icon" src="images/icon-obj.4.png" alt="Expert Team Development">
+            <p>To create and develop a team of experts in the field of intellectual property management and R&D commercialization.</p>    
+        </div>
+        <div class="objective">
+            <p>To build a strong academe-industry partnership especially in consulting, research, technology transfer, and commercialization.</p>
+            <img class="objective-icon" src="images/icon-obj.5.png" alt="Academe-Industry Partnership">
+        </div>
+        <div class="objective">
+            <img class="objective-icon" src="images/icon-obj.6.png" alt="Innovation Fund">
+            <p>To establish and maintain an innovation fund for research and innovation.</p>    
+        </div>
+    </div>
+</section>
+
+<!-- Our Services Section -->
+<section id="our-services" class="our-services">
+    <h2>OUR SERVICES</h2>
+    <div class="services-container">
+        <div class="service">
+            <div class="service-front">
+                <img src="images/services1.png" alt="IP Management">
+                <p>IP Management</p>
+            </div>
+            <div class="service-hover">
+                <p>IP Management involves protecting and managing intellectual property rights, ensuring legal compliance, and maximizing innovation potential.</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="service-front">
+                <img src="images/services2.png" alt="Technology Transfer & Promotion">
+                <p>Technology Transfer & Promotion</p>
+            </div>
+            <div class="service-hover">
+                <p>Technology Transfer & Promotion bridges the gap between research institutions and industry by facilitating commercialization of innovative technologies.</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="service-front">
+                <img src="images/services3.png" alt="Industry Matching & Partnership">
+                <p>Industry Matching & Partnership</p>
+            </div>
+            <div class="service-hover">
+                <p>Industry Matching & Partnership connects businesses with research institutions to foster collaboration and innovation-driven partnerships.</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="service-front">
+                <img src="images/services4.png" alt="R&D Commercialization">
+                <p>R&D Commercialization</p>
+            </div>
+            <div class="service-hover">
+                <p>R&D Commercialization transforms research outcomes into viable products and services, benefiting industries and society.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Our Team -->
+<section id="our-team" class="our-team">
+<div class="background">
+    <div class="content">
+        <h1>Our Team</h1>
+        <div class="team-container">
+            <div class="team-member large">
+                <div class="image-wrapper">
+                    <div class="gradient-background"></div>
+                    <div class="image-container">
+                        <img src="images/sir.png" alt="Arnel Secondes">
+                    </div>
+                </div>
+                <h2>ARNEL N. SECONDES</h2>
+                <p>Director</p>
+            </div>
+            <div class="team-members-grid">
+                <div class="team-member">
+                    <div class="image-wrapper">
+                        <div class="gradient-background"></div>
+                        <div class="image-container">
+                            <img src="images/missted.png" alt="Ted Hyacinth Aspera">
+                        </div>
+                    </div>
+                    <h2>TED HYACINTH T. ASPERA</h2>
+                    <p>General Manager</p>
+                </div>
+                <div class="team-member">
+                    <div class="image-wrapper">
+                        <div class="gradient-background"></div>
+                        <div class="image-container">
+                            <img src="images/Ms_Joe.png" alt="Maria Joeanne Gison">
+                        </div>
+                    </div>
+                    <h2>MARIA JOEANNE A. GISON</h2>
+                    <p>UMWAD-BINHI Staff</p>
+                </div>
+                <div class="team-member">
+                    <div class="image-wrapper">
+                        <div class="gradient-background"></div>
+                        <div class="image-container">
+                            <img src="images/Ms._Alexa.png" alt="Alexa Mae Borda">
+                        </div>
+                    </div>
+                    <h2>ALEXA MAE M. BORDA</h2>
+                    <p>BINHI Staff</p>
+                </div>
+                <div class="team-member">
+                    <div class="image-wrapper">
+                        <div class="gradient-background"></div>
+                        <div class="image-container">
+                            <img src="images/Ms._Aza.png" alt="Azaleah Articulo">
+                        </div>
+                    </div>
+                    <h2>AZALEAH G. ARTICULO</h2>
+                    <p>KTTBDC Staff</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wave"></div>
+</div>
+</section>
+
+<!-- Partners & Collaborators Section -->
+<section id="partners" class="partners-section">
+    <h2>PARTNERS & COLLABORATORS</h2>
+    <div class="carousel-container">
+        <div class="partners-carousel">
+            <div class="partner"><img src="images/wvsu.png" alt="Partner 1"></div>
+            <div class="partner"><img src="images/CHED.png" alt="Partner 2"></div>
+            <div class="partner"><img src="images/TESDA.png" alt="Partner 3"></div>
+            <div class="partner"><img src="images/DICT.png" alt="Partner 4"></div>
+            <div class="partner"><img src="images/DOST.png" alt="Partner 5"></div>
+            <div class="partner"><img src="images/DTI.png" alt="Partner 6"></div>
+            <div class="partner"><img src="images/IBC.png" alt="Partner 7"></div>
+            <div class="partner"><img src="images/II.png" alt="Partner 8"></div>
+            <div class="partner"><img src="images/PCCI.png" alt="Partner 9"></div>
+            <div class="partner"><img src="images/PIOS.png" alt="Partner 10"></div>
+            <div class="partner"><img src="images/CIP.png" alt="Partner 11"></div>
+            <div class="partner"><img src="images/LEDIP.png" alt="Partner 12"></div>
+            <div class="partner"><img src="images/Umwad.png" alt="Partner 13"></div>
+            <div class="partner"><img src="images/GSC.png" alt="Partner 14"></div>
+            <div class="partner"><img src="images/SFCI.png" alt="Partner 15"></div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="form-container">
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+            
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Your message here"></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="info-container">
+        <h2>Get in Touch</h2>
+        <p>Reach out for inquiries or partnership opportunities.</p>
+    </div>
+</div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-branding">
+            <img src="images/KTTBDC_Logo.png" alt="KTTBDC Logo">
+            <div class="footer-text">
+                <div class="title">KTTBDC</div>
+                <div class="subtitle">Knowledge Technology Transfer & Business Development Center</div>
+            </div>
+        </div>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Services</a>
+        </div>
+        <div class="links">
+            <a href="#">Component Units</a>
+            <a href="#">Goals</a>
+            <a href="#">Objectives</a>
+        </div>
+        <div class="links">
+            <a href="#">Partners and Collaborators</a>
+            <a href="#">Meet Our Team</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+    <div class="social-icons">
+        <img src="images/fb.png" alt="Facebook">
+        <img src="images/mail.png" alt="Gmail">
+        <img src="images/contact.png" alt="Phone">
+    </div>
+    <div class="copyright">Copyright. All Rights Reserved 2025.</div>
+</footer>
+</body>
+</html>
