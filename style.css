@@ -876,6 +876,7 @@ h2 {
     background-color: white;
     
 }
+/*Contact Us */
 .form-container {
     background: white;
     padding: 20px;
@@ -930,6 +931,7 @@ button:hover {
     border-bottom: 3px solid #dcae1d;
     margin-top: 5px;
 }
+/*footer*/
 .footer-container {
     display: flex;
     justify-content: space-between;
