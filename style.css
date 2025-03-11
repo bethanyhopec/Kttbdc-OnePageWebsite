@@ -615,14 +615,14 @@ button {
 /* Our Services Section */
 .our-services {
     text-align: center;
-    padding: 150px 50px;
+    padding: 100px 50px;
     background: linear-gradient(to right, #c4e0e5, #ffffff);
     border-radius: 20px;
 }
 
 .our-services h2 {
     color: #004080;
-    font-size: 28px;
+    font-size: 48px;
     font-weight: bold;
     margin-bottom: 30px;
 }
@@ -712,8 +712,24 @@ button {
     }
 }
 /*Our Team*/
+body, html {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+
 .background {
-    background-image: url('images/KTTBDC_Logo.png');
+    position: relative; /* Required for pseudo-element positioning */
+    margin-top: 90px;
+    padding-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+    /*background-image: url('images/KTTBDC_Logo.png');
     background-size: cover;
     opacity: 0.1;
     background-position: center;
@@ -723,7 +739,22 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative; /* Ensure the wave is positioned relative to this container */
+    position: relative;  /*Ensure the wave is positioned relative to this container */
+}
+
+.background::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* Position the overlay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background-image: url('images/KTTBDC_Logo.png');
+    /*background-image: inherit; /* Use the same background image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* Set the opacity of the background image only */
+    z-index: -1; /* Place it behind the content */
 }
 
 .content {
@@ -750,6 +781,10 @@ h1 {
 .team-member {
     margin: 10px;
     text-align: center;
+}
+
+.team-member.large {
+    margin-bottom: 50px; /* Add gap between large team member and the grid */
 }
 
 .team-member.large .image-wrapper {
@@ -807,6 +842,18 @@ h1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
+}
+
+/* Class for the wave image */
+.wave-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 110%;
+    height: 150px; /* Adjust height as needed */
+    background-image: url('images/wave.png');
+    background-size: cover;
+    background-position: bottom;
 }
 
 
