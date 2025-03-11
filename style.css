@@ -15,7 +15,7 @@ header {
     border-bottom: 1px #09323F solid;
     position: fixed;
     width: 100%;
-    top: 0;
+    top: 0;  
     z-index: 1000;
 }
 
