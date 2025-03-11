@@ -3,7 +3,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background: #c4e0e5;
+    background: white;
     color: #333;
 }
 
@@ -150,13 +150,15 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
+    background: url('images/background.png') no-repeat center center/cover;
     display: flex;
     align-items: center; /* Aligns image with text */
     justify-content: space-between;
     max-width: 1200px;
     margin: 100px auto 0; /* Adjusted margin for better spacing */
-    padding: 50px 20px;
+    padding: 100px 100px;
     flex-wrap: wrap; /* Ensures responsiveness */
+    z-index: 2;
 }
 
 /* Hero Content */
@@ -250,20 +252,24 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F2FFFB;
+    background-color: white;
 }
 
 /* Component Units Section */
 .background-container {
+    background-color: white;
     position: absolute;
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     background: url('images/components.png') no-repeat center center/cover;
+    margin-top: -140px;
+    z-index: -20; /* Keeps it behind */
+    
 }
 
 .overlay {
     width: 100%;
-    height: 100%;
+    height: 150%;
     background: linear-gradient(to bottom, rgba(255, 255, 251, 0.5), rgba(255, 255, 255, 0));
 }
 
@@ -292,44 +298,50 @@ h1 {
     gap: 50px;
     margin-top: 50px;
 }
-
+/* Logo Card */
 .logo-card {
     text-align: center;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative; /* Allows button to be positioned inside */
+    padding-bottom: 80px; /* Prevents button overlap */
 }
 
 /* Ensuring Circular Image */
 .logo-card img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover; /* Ensures the image is cropped to fit in a perfect circle */
-    border-radius: 10;
+    width: 250px;
+    height: 260px;
+    object-fit: cover; 
+    border-radius: 5%; /* Fix for perfect circle */
     padding: 20px;
+    bottom: 60%;
     transition: transform 0.3s ease-in-out;
 }
 
-
-button {
-    margin-top: 20px;
-    padding: 15px 30px;
+/* Button Positioned Below Image */
+.logo-card button {
+    position: absolute;
+    bottom: 0; /* Sticks to bottom */
+    left: 23%;
+    top: 50%; /* Ensures full centering */
+    padding: 15px 25px;
     border: 3px solid #dcae1d;
     background-color: white;
     color: #143147;
-    font-size: 25px;
+    font-size: 12px;
     cursor: pointer;
     border-radius: 12px;
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
 }
 
+/* Hover Effect - No Position Change */
 .logo-card:hover button {
     background-color: #dcae1d;
-    font-weight: bold;
 }
 
-/* Pop-up Styles */
+/* Pop-up Overlay */
 .popup {
     display: none;
     position: fixed;
@@ -337,28 +349,117 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
+    background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 
+/* Pop-up Content */
 .popup-content {
-    background: white;
-    padding: 20px;
-    width: 400px;
-    border-radius: 10px;
-    text-align: center;
+    background: url('images/Pop-ups.png') no-repeat center center;
+    background-size: cover;
+    width: 80%;
+    max-width: 900px;
+    height: 80%;
+    max-height: 900px;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: right;
     position: relative;
+    box-shadow: 0px 4px 15px rgba(115, 221, 245, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
 }
 
+/* Close Button */
 .close-btn {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
     cursor: pointer;
+    color: #333;
 }
+
+.close-btn:hover {
+    color: rgb(12, 66, 78);
+}
+
+/* Image Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* Hide all images by default */
+.slide {
+    width: 100%;
+    display: none;
+    border-radius: 10px;
+}
+
+/* Show only the active image */
+.active {
+    display: block;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(255, 255, 255, 0.7);
+    color: black;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .popup-content {
+        width: 90%;
+        padding: 20px;
+    }
+    .prev, .next {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
 
 
 /* About Us Section */
@@ -712,8 +813,24 @@ button {
     }
 }
 /*Our Team*/
+body, html {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+
 .background {
-    background-image: url('images/KTTBDC_Logo.png');
+    position: relative; /* Required for pseudo-element positioning */
+    margin-top: 90px;
+    padding-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+    /*background-image: url('images/KTTBDC_Logo.png');
     background-size: cover;
     opacity: 0.1;
     background-position: center;
@@ -723,7 +840,22 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative; /* Ensure the wave is positioned relative to this container */
+    position: relative;  /*Ensure the wave is positioned relative to this container */
+}
+
+.background::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* Position the overlay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background-image: url('images/KTTBDC_Logo.png');
+    /*background-image: inherit; /* Use the same background image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* Set the opacity of the background image only */
+    z-index: -1; /* Place it behind the content */
 }
 
 .content {
@@ -750,6 +882,10 @@ h1 {
 .team-member {
     margin: 10px;
     text-align: center;
+}
+
+.team-member.large {
+    margin-bottom: 50px; /* Add gap between large team member and the grid */
 }
 
 .team-member.large .image-wrapper {
@@ -809,6 +945,19 @@ h1 {
     gap: 25px;
 }
 
+/* Class for the wave image */
+.wave-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 260px; /* Adjust height as needed */
+    background-image: url('images/wave.png');
+    background-size: cover;
+    background-position: bottom;
+}
+
+
 
 /*Partner*/
 .partners-section {
@@ -863,18 +1012,19 @@ h2 {
     0% { transform: translateX(0); }
     100% { transform: translateX(-1500px); } /* Moves left by 15 images */
 }
-
+/*Contact Us */
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
+    width:1000;
     gap: 20px;
     padding: 20px;
     background-color: white;
     
 }
-/*Contact Us */
+
 .form-container {
     background: white;
     padding: 20px;
@@ -901,9 +1051,10 @@ input, textarea {
 }
 button {
     margin-top: 10px;
-    padding: 10px 20px;
+    padding: 3px 8px;
     background-color: white;
     color: #004996;
+    font-size: 4;
     border:1px solid #dcae1d;
     border-radius: 5px;
     cursor: pointer;
