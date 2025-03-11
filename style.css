@@ -15,7 +15,7 @@ header {
     border-bottom: 1px #09323F solid;
     position: fixed;
     width: 100%;
-    top: 0;
+    top: 0;  
     z-index: 1000;
 }
 
@@ -716,14 +716,14 @@ h1 {
 /* Our Services Section */
 .our-services {
     text-align: center;
-    padding: 150px 50px;
+    padding: 100px 50px;
     background: linear-gradient(to right, #c4e0e5, #ffffff);
     border-radius: 20px;
 }
 
 .our-services h2 {
     color: #004080;
-    font-size: 28px;
+    font-size: 48px;
     font-weight: bold;
     margin-bottom: 30px;
 }
@@ -944,19 +944,6 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
-
-/* Class for the wave image */
-.wave-image {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 260px; /* Adjust height as needed */
-    background-image: url('images/wave.png');
-    background-size: cover;
-    background-position: bottom;
-}
-
 
 
 /*Partner*/
