@@ -25,7 +25,7 @@
             <ul>
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about-us">About</a></li> 
-                <li><a href="#contact-us">Contact Us</a></li>
+                <li><a href="#container">Contact Us</a></li>
                 <li class="dropdown">
                     <a href="#">Explore ▼</a>
                     <ul class="dropdown-menu">
@@ -42,7 +42,7 @@
     </header>
 
 <!-- Hero Section -->
-<section class="hero">
+<section id = "hero" class="hero">
     <div class="hero-content">
         <h1><span>KTTBDC</span></h1>
         <p>Knowledge Technology Transfer and Business Development Center</p>
@@ -312,7 +312,7 @@
             </div>
         </div>
     </div>
-    <div class="wave"></div>
+    <div class="wave-image"></div>
 </div>
 </section>
 
@@ -339,27 +339,44 @@
         </div>
     </div>
 </section>
+<!--contact us-->
 
-<div class="container">
+<div id="container" class="container">
     <div class="form-container">
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your name">
+        <form id="contactForm">
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <span class="error-message" id="nameError"></span>
+            </div>
             
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <span class="error-message" id="emailError"></span>
+            </div>
             
-            <label for="message">Message</label>
-            <textarea id="message" placeholder="Your message here"></textarea>
+            <div class="input-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="3" placeholder="Your message here" required></textarea>
+                <span class="error-message" id="messageError"></span>
+            </div>
             
-            <button type="submit">Submit</button>
+            <div class="button-container">
+                <button type="submit">Submit</button>
+            </div>
+            
+           <!-- <div class="success-message" id="successMessage">Message Sent Successfully!</div>-->
         </form>
     </div>
-    <div class="info-container">
+    <div class="text-container">
         <h2>Get in Touch</h2>
         <p>Reach out for inquiries or partnership opportunities.</p>
+        <hr>
     </div>
 </div>
+
+<!--footer-->
 <footer>
     <div class="footer-container">
         <div class="footer-branding">

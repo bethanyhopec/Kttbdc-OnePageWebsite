@@ -55,3 +55,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    let isValid = true;
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    document.getElementById("nameError").textContent = "";
+    document.getElementById("emailError").textContent = "";
+    document.getElementById("messageError").textContent = "";
+
+    if (name === "") {
+        document.getElementById("nameError").textContent = "Name is required.";
+        isValid = false;
+    }
+    if (email === "" || !emailPattern.test(email)) {
+        document.getElementById("emailError").textContent = "Enter a valid email address.";
+        isValid = false;
+    }
+    if (message === "") {
+        document.getElementById("messageError").textContent = "Message is required.";
+        isValid = false;
+    }
+
+    if (isValid) {
+        document.getElementById("successMessage").style.display = "block";
+        setTimeout(() => {
+            document.getElementById("successMessage").style.display = "none";
+        }, 2000);
+        
+        this.reset();
+    }
+});
