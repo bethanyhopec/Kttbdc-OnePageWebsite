@@ -572,18 +572,31 @@ h1 {
     max-width: 500px;
     margin-left: 3%;
 }
+.popup-binhi .slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(16, 51, 180, 0.15);
+    border-bottom: 4px solid #0da130;
+    
+}
 
 .slider {
     position: relative;
     width: 100%;
     overflow: hidden;
     border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(16, 51, 180, 0.15);
+    border-bottom: 4px solid #0D47A1;
+    
 }
 
 .slide {
     width: 100%;
     display: none;
     border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(16, 51, 180, 0.15);
 }
 
 .slide.active {
@@ -611,7 +624,10 @@ h1 {
 .prev:hover, .next:hover {
     background: rgba(255, 255, 255, 0.7);
     color: black;
-}/* Standardized Right Side Content */
+}
+
+
+/* Standardized Right Side Content */
 .right-content {
     flex: 1;
     display: flex;
