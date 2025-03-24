@@ -508,7 +508,26 @@ h1 {
     background: linear-gradient(to right, #66cc66, #ffffff); /* Green */
 }
 
-
+.popup h2 {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    margin-right: 55px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #004080;
+    margin-bottom: 10px;
+}
+.popup-binhi h2 {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    margin-right: 55px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #0c9342;
+    margin-bottom: 10px;
+}
 /* Pop-up Close Button */
 .close-btn {
     position: absolute;
@@ -533,6 +552,11 @@ h1 {
     color: white;
     transform: scale(1.1);
 }
+.popup-binhi .close-btn:hover {
+    background: #1c8e14;
+    color: white;
+    transform: scale(1.1);
+}
 
 /* Layout for Pop-up Content */
 .popup-content {
@@ -545,7 +569,8 @@ h1 {
 /* Standardized Image Slider */
 .slider-container {
     flex: 1;
-    max-width: 400px;
+    max-width: 500px;
+    margin-left: 3%;
 }
 
 .slider {
