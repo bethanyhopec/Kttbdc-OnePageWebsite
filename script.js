@@ -90,3 +90,35 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         this.reset();
     }
 });
+
+document.querySelectorAll('.popup').forEach(popup => {
+    let slides = popup.querySelectorAll('.slide');
+    let index = 0;
+
+    function showSlide(n) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === n);
+        });
+    }
+
+    // Initialize first slide
+    showSlide(index);
+
+    let nextBtn = popup.querySelector('.next');
+    let prevBtn = popup.querySelector('.prev');
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            index = (index - 1 + slides.length) % slides.length;
+            showSlide(index);
+        });
+    }
+});
+

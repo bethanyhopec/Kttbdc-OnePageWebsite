@@ -53,81 +53,148 @@
     </div>
 </section>
 
-
 <!-- Component Units Section -->
 <section id="component-units" class="component-units">
     <div class="background-container">
         <div class="overlay"></div>
     </div>
-    
+
     <div class="content">
         <h1>COMPONENT UNITS</h1>
         <div class="divider"></div>
         <div class="logo-container">
             <div class="logo-card">
                 <img src="images/itso.png" alt="ITSO">
-                <button>ITSO</button> <!-- Must match "itso" in JavaScript -->
+                <button onclick="openPopup('itso-popup')">ITSO</button>
             </div>
             <div class="logo-card">
                 <img src="images/ktto.png" alt="KTTO">
-                <button>KTTO</button> <!-- Must match "ktto" in JavaScript -->
+                <button onclick="openPopup('ktto-popup')">KTTO</button>
             </div>
             <div class="logo-card">
                 <img src="images/binhi.png" alt="BINHI">
-                <button>BINHI</button> <!-- Must match "binhi" in JavaScript -->
-            </div>            
+                <button onclick="openPopup('binhi-popup')">BINHI</button>
+            </div>
         </div>
     </div>
 </section>
-
 <!-- ITSO Pop-up -->
-<div id="itso-popup" class="popup">
+<div id="itso-popup" class="popup popup-itso">
+    <span class="close-btn" onclick="closePopup('itso-popup')">&times;</span>
     <div class="popup-content">
-        <span class="close-btn" onclick="closePopup('itso-popup')">&times;</span>
-        <h2>ITSO</h2>
-      <!--  <div class="slider">
-            <img src="images/itso1.png" class="slide active">
-            <img src="images/itso2.png" class="slide">
-            <img src="images/itso3.png" class="slide">
-            <button class="prev" onclick="prevSlide('itso-popup')">&#10094;</button>
-            <button class="next" onclick="nextSlide('itso-popup')">&#10095;</button>
+        <!-- Left Side: Image Slider -->
+        <div class="slider-container">
+            <div class="slider">
+                <img src="images/itso/ITSO.png" class="slide active">
+                <img src="images/itso/itso1.png" class="slide">
+                <img src="images/itso/itso2.png" class="slide">
+                <img src="images/itso/itso3.png" class="slide">
+                <img src="images/itso/itso4.png" class="slide">
+                <img src="images/itso/itso5.png" class="slide">
+                <img src="images/itso/itso6.png" class="slide">
+                <img src="images/itso/itso7.png" class="slide">
+                <img src="images/itso/itso8.png" class="slide">
+                <img src="images/itso/itso9.png" class="slide">
+                <button class="prev" onclick="prevSlide('itso-popup')">&#10094;</button>
+                <button class="next" onclick="nextSlide('itso-popup')">&#10095;</button>
+            </div>
         </div>
-        <p>ITSO focuses on intellectual property management and technology transfer at WVSU.</p> -->
+
+        <!-- Right Side: Rectangles (Mission & Vision) -->
+        <div class="right-content">
+            <div class="itso">
+                <img src="images/IK.png" alt="Mission">
+                <span>Mission</span>
+                <p class="extra-text">To provide quality patent information and IP services to the university community; and to support innovation and research development that will impact the community and the country's social, technological, and economic development.</p>
+            </div>
+            <div class="itso">
+                <img src="images/IK2.png" alt="Vision">
+                <span>Vision</span>
+                <p class="extra-text">A thriving ecosystem at West Visayas State University (WVSU) that leads in scientific innovation and technology transfer, we empower communities through effective commercialization and contribute advancement.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- KTTO Pop-up -->
+<div id="ktto-popup" class="popup popup-ktto">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup('ktto-popup')">&times;</span>
+
+
+        <!-- Left Side: Image Slider -->
+        <div class="slider-container">
+            <div class="slider">
+                <img src="images/ktto/ktto.png" class="slide active">
+                <img src="images/ktto/ktto1.png" class="slide">
+                <img src="images/ktto/ktto2.png" class="slide">
+                <img src="images/ktto/ktto3.png" class="slide">
+                <img src="images/ktto/ktto4.png" class="slide">
+                <img src="images/ktto/ktto5.png" class="slide">
+                <img src="images/ktto/ktto6.png" class="slide">
+                <img src="images/ktto/ktto7.png" class="slide">
+                <img src="images/ktto/ktto8.png" class="slide">
+                <img src="images/ktto/ktto9.png" class="slide">
+                <button class="prev" onclick="prevSlide('ktto-popup')">&#10094;</button>
+                <button class="next" onclick="nextSlide('ktto-popup')">&#10095;</button>
+            </div>
+        </div>
+
+
+        <!-- Right Side: Hover Rectangles -->
+        <div class="right-content">
+            <div class="ktto">
+                <img src="images/IK.png" alt="Mission">
+                <span>Mission</span>
+                <p class="extra-text">To provide quality patent information and IP services to the university community; and to support innovation and research development that will impact the community and the country's social, technological, and economic development.</p>
+            </div>
+            <div class="ktto">
+                <img src="images/IK2.png" alt="Vision">
+                <span>Vision</span>
+                <p class="extra-text">A thriving ecosystem at West Visayas State University (WVSU) that leads in scientific innovation and technology transfer, we empower communities through effective commercialization and contribute advancement.</p>
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- KTTO Pop-up -->
-<div id="ktto-popup" class="popup">
-    <div class="popup-content">
-        <span class="close-btn" onclick="closePopup('ktto-popup')">&times;</span>
-        <h2>KTTO</h2>
-       <!--  <div class="slider">
-            <img src="images/ktto1.png" class="slide active">
-            <img src="images/ktto2.png" class="slide">
-            <img src="images/ktto3.png" class="slide">
-            <button class="prev" onclick="prevSlide('ktto-popup')">&#10094;</button>
-            <button class="next" onclick="nextSlide('ktto-popup')">&#10095;</button>
-        </div>
-        <p>KTTO helps in transferring university research into viable commercial and societal applications.</p> -->
-    </div> 
-</div>
-
 <!-- BINHI Pop-up -->
-<div id="binhi-popup" class="popup">
+<div id="binhi-popup" class="popup popup-binhi">
     <div class="popup-content">
         <span class="close-btn" onclick="closePopup('binhi-popup')">&times;</span>
-        <h2>BINHI</h2>
-    <!--, <div class="slider">
-            <img src="images/binhi1.png" class="slide active">
-            <img src="images/binhi2.png" class="slide">
-            <img src="images/binhi3.png" class="slide">
-            <button class="prev" onclick="prevSlide('binhi-popup')">&#10094;</button>
-            <button class="next" onclick="nextSlide('binhi-popup')">&#10095;</button>
+       
+        <!-- Left Side: Image Slider -->
+        <div class="slider-container">
+            <div class="slider">
+                <img src="images/binhi/Binhi.png" class="slide active">
+                <img src="images/binhi/binhi1.png" class="slide">
+                <img src="images/binhi/binhi2.png" class="slide">
+                <img src="images/binhi/binhi3.png" class="slide">
+                <img src="images/binhi/binhi4.png" class="slide">
+                <img src="images/binhi/binhi5.png" class="slide">
+                <img src="images/binhi/binhi6.png" class="slide">
+                <img src="images/binhi/binhi7.png" class="slide">
+                <img src="images/binhi/binhi8.png" class="slide">
+                <img src="images/binhi/binhi9.png" class="slide">
+                <img src="images/binhi/binhi10.png" class="slide">
+                <button class="prev" onclick="prevSlide('binhi-popup')">&#10094;</button>
+                <button class="next" onclick="nextSlide('binhi-popup')">&#10095;</button>
+            </div>
         </div>
-        <p>BINHI serves as an incubation hub for startups and innovative projects.</p> -->
-    </div> 
-</div>
 
+        <!-- Right Side: Mission & Vision -->
+        <div class="right-content">
+            <div class="binhi">
+                <img src="images/B.png" alt="Mission">
+                <span>Mission</span>
+                <p class="extra-text">Empowering innovation and economic growth by inspiring and nurturing technology-based startups, fostering collaboration between academia, industry, and government, and advancing the commercialization of local technologies in the region.</p>
+            </div>
+            <div class="binhi">
+                <img src="images/B2.png" alt="Vision">
+                <span>Vision</span>
+                <p class="extra-text">Fostering a visionary ecosystem where technology-based startups flourish. Local innovations prosper, and collaboration propels regional economic growth, establishing BINHI as a respected leader in enterprising innovations.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <!-- About Us Section -->
