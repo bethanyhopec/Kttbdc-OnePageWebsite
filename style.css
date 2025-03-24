@@ -248,11 +248,129 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: white;
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 30px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .hero-image img {
+        max-width: 350px;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    /* Adjust Header */
+    .header-container {
+        padding: 10px;
+    }
+
+    .logo-container img {
+        height: 40px;
+    }
+
+    /* Navigation */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle.active + nav ul {
+        display: flex;
+    }
+
+    /* Hero */
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-image img {
+        max-width: 300px;
+    }
+
+    /* Buttons */
+    .btn {
+        font-size: 1rem;
+        padding: 10px 15px;
+        width: 180px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    /* Header */
+    .header-container {
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .logo-text h1 {
+        font-size: 1.2rem;
+    }
+
+    .logo-text p {
+        font-size: 0.7rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .hero-image img {
+        max-width: 250px;
+    }
+
+    /* Button */
+    .btn {
+        font-size: 1rem;
+        padding: 8px 12px;
+        width: 160px;
+    }
 }
 
 /* Component Units Section */
@@ -468,9 +586,7 @@ h1 {
 .prev:hover, .next:hover {
     background: rgba(255, 255, 255, 0.7);
     color: black;
-}
-
-/* Standardized Right Side Content */
+}/* Standardized Right Side Content */
 .right-content {
     flex: 1;
     display: flex;
@@ -479,11 +595,10 @@ h1 {
 }
 
 /* Mission & Vision Cards (Equal Sizing for ITSO, KTTO, BINHI) */
-.itso{
+.itso, .ktto, .binhi {
     width: 180px;
     height: 220px;
     background: #ffffff;
-    border: 2px solid #0D47A1;
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
     display: flex;
@@ -497,140 +612,76 @@ h1 {
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
-.ktto {
-    width: 180px;
-    height: 220px;
-    background: #ffffff;
-    border: 2px solid #0D47A1;
-    border-radius: 12px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
-}
+.itso { border: 2px solid #0D47A1; }
+.ktto { border: 2px solid #0D47A1; }
+.binhi { border: 2px solid #0da155; }
 
-.binhi {
-    width: 180px;
-    height: 220px;
-    background: #ffffff;
-    border: 2px solid #0da155;
-    border-radius: 12px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+.itso:hover, .ktto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 4px rgba(26, 18, 181, 0.2);
 }
-
-.itso img {
+.binhi:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 4px rgba(19, 141, 25, 0.2);
+}
+.itso img, .ktto img, .binhi img {
     width: 60px;
     height: auto;
     margin-bottom: 10px;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.ktto img {
-    width: 60px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.binhi img {
-    width: 60px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-
-/* Extra Text Reveal */
-.itso .extra-text {
-    opacity: 0;
-    max-height: 0;
-    font-size: 11px;
-    font-weight: normal;
-    color: #5470ed;
-    text-align: center;
-    padding:10px;
-    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
-}
-
-/* Extra Text Reveal */
-.ktto .extra-text {
-    opacity: 0;
-    max-height: 0;
-    font-size: 11px;
-    font-weight: normal;
-    color: #3f76ed;
+/* Hover Effect */
+.itso .extra-text, .ktto .extra-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    font-size: 14px;
+    color: #004080;
     padding: 10px;
-    text-align: center;
-    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
-}
-
-/* Extra Text Reveal */
-.binhi .extra-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
-    max-height: 0;
-    font-size: 11px;
-    font-weight: normal;
-    color: #13ae42;
-    padding: 10px;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 12px;
     text-align: center;
-    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+.binhi .extra-text{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    font-size: 14px;
+    color: #198c54;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 12px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
-.itso:hover .extra-text {
+.itso:hover .extra-text, .ktto:hover .extra-text, .binhi:hover .extra-text {
     opacity: 1;
-    max-height: 100;
-    height:200%;
 }
 
-.ktto:hover .extra-text {
-    opacity: 1;
-    max-height: 100;
-}
-
-.binhi:hover .extra-text {
-    opacity: 1;
-    max-height: 100;
-}
-
-/* Ensure only extra text appears on hover */
-.itso:hover img,
-.ktto:hover img,
-.binhi:hover img,
-.itso:hover span,
-.ktto:hover span,
-.binhi:hover span {
+.itso:hover img, .ktto:hover img, .binhi:hover img {
     opacity: 0;
     visibility: hidden;
-}
-
-/* Show extra text on hover */
-.itso:hover .extra-text,
-.ktto:hover .extra-text,
-.binhi:hover .extra-text {
-    opacity: 1;
-    max-height: 250px;
-    visibility: visible;
 }
 
 /* Fade-in Animation */
