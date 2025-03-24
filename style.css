@@ -653,8 +653,8 @@ h1 {
     box-shadow: 0 10px 4px rgba(19, 141, 25, 0.2);
 }
 .itso img, .ktto img, .binhi img {
-    width: 60px;
-    height: auto;
+    width: 80px;
+    height: 100px;
     margin-bottom: 10px;
     transition: opacity 0.3s ease-in-out;
 }
