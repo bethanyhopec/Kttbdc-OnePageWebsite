@@ -446,8 +446,8 @@ h1 {
     top: 50%; /* Ensures full centering */
     padding: 15px 25px;
     border: 3px solid #dcae1d;
-    background-color: white;
-    color: #143147;
+    background-color: #dcae1d;
+    color:white;
     font-weight: bold;
     font-size: 12px;
     cursor: pointer;
@@ -457,7 +457,7 @@ h1 {
 
 /* Hover Effect - No Position Change */
 .logo-card:hover button {
-    background-color: #dcae1d;
+    background-color: #a0cac2;
     font-weight: bolder;
     color:#002855;
     border:none;
@@ -576,9 +576,9 @@ h1 {
     position: relative;
     width: 100%;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 20px;
     box-shadow: 0px 4px 12px rgba(16, 51, 180, 0.15);
-    border-bottom: 4px solid #0da130;
+    border-bottom: 5px solid #0da130;
     
 }
 
@@ -586,9 +586,9 @@ h1 {
     position: relative;
     width: 100%;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 20px;
     box-shadow: 0px 4px 12px rgba(16, 51, 180, 0.15);
-    border-bottom: 4px solid #0D47A1;
+    border-bottom: 5px solid #0D47A1;
     
 }
 
