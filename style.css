@@ -688,7 +688,7 @@ h1 {
     width: 100%;
     height: 100%;
     background: white;
-    font-size: 12px;
+    font-size: 14px;
     color: #198c54;
     padding: 10px;
     display: flex;
@@ -1164,7 +1164,7 @@ body, html {
 .background {
     position: relative; /* Required for pseudo-element positioning */
     margin-top: 90px;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1206,12 +1206,16 @@ h1 {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    padding-bottom: 150px; /* Add padding to avoid overlap with the wave */
+    padding-bottom: 80px; /* Add padding to avoid overlap with the wave */
 }
 
 .team-member {
     margin: 10px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .team-member.large {
@@ -1229,6 +1233,9 @@ h1 {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .team-member .gradient-background {
@@ -1247,6 +1254,9 @@ h1 {
     height: 100%;
     border-radius: 10px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .team-member .image-container img {
@@ -1259,14 +1269,14 @@ h1 {
     font-size: 13px;
     font-weight: bold;
     color: #002E91;
-    margin-top: 8px;
+    margin-top: 2px;
 }
 
 .team-member p {
     font-size: 13px;
     font-style: italic;
     color: #719495;
-    margin-top: 4px;
+    margin-top: 2px;
 }
 
 .team-members-grid {
@@ -1278,15 +1288,14 @@ h1 {
 /* Class for the wave image */
 .wave-image {
     position: absolute;
-    bottom: 0;
+    bottom: -50px;
     left: 0;
     width: 100%;
-    height: 260px; /* Adjust height as needed */
+    height: 300px; /* Adjust height as needed */
     background-image: url('images/wave.png');
     background-size: cover;
     background-position: bottom;
 }
-
 
 
 /*Partner*/
