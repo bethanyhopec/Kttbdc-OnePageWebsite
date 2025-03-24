@@ -808,6 +808,35 @@ h1 {
     }
 }
 
+.text-marquee { 
+    width: 48%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 180px;/* adjust based on your popup position */
+  }
+  
+  .text-marquee span {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: translatex(10%);
+    animation: scroll-left 8s linear infinite;
+    font-size: 30px; /* Customize font-size, color, etc. */
+    color: #000; /* Customize text color */
+    padding-block: 8px;
+    border-block: 1px solid;
+    animation: scroll-left 4s linear infinite;
+   
+  }
+  
+  @keyframes scroll-left {
+      0% {
+        transform: translateX(20%); /* Start at 50% from right */
+      }
+      100% {
+        transform: translateX(-100%); /* End at -50% left */
+      }
+    }
 
 /* About Us Section */
 .about-us {
