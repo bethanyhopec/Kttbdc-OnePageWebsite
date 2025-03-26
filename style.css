@@ -32,14 +32,14 @@ header {
 .logo-container {
     display: flex;
     align-items: left;
-    gap: -50px; /* Reduced gap to bring the text closer */
+    gap: -50px; 
 }
 
 /* Logo Image */
 .logo-container img {
     height: 70px;
-    margin-left: -10%; /* Slight left margin */
-    margin-top: -25px; /* Adjusted to move the logo slightly higher */
+    margin-left: -10%; 
+    margin-top: -25px; 
 }
 
 /* Text Beside Logo */
@@ -58,17 +58,17 @@ header {
     -webkit-text-fill-color: transparent;
     margin: 0;
     margin-left: -5%;
-    margin-top: -5px; /* Moves text slightly higher */
-    line-height: 1; /* Ensures text is not too spaced out */
+    margin-top: -5px; 
+    line-height: 1; 
 }
 
 .logo-text p {
-    font-size: 0.27rem; /* Increased for better readability */
+    font-size: 0.27rem; 
     font-weight: 400;
     color: #004996;
     margin: 0;
     margin-left: -5%;
-    margin-top: -2px; /* Slightly raises paragraph text */
+    margin-top: -2px; 
 }
 
 /* Navigation Menu */
@@ -114,14 +114,14 @@ nav ul li a:hover {
     padding: 12px 20px;
     min-width: 200px; 
     z-index: 10; 
-    transition: all 0.3s ease-in-out; /* Smooth dropdown effect */
+    transition: all 0.3s ease-in-out; 
 }
 
 /* Show dropdown on hover */
 .dropdown:hover .dropdown-menu {
     display: block;
     opacity: 1;
-    transform: translate(-50%, 5px); /* Small drop-down effect */
+    transform: translate(-50%, 5px); 
 }
 
 /* Dropdown List Items */
@@ -151,26 +151,26 @@ nav ul li a:hover {
 .hero {
     background: url('images/background.png') no-repeat center center/cover;
     display: flex;
-    align-items: center; /* Aligns image with text */
+    align-items: center; 
     justify-content: space-between;
     max-width: 1200px;
-    margin: 100px auto 0; /* Adjusted margin for better spacing */
+    margin: 100px auto 0; 
     padding: 100px 100px;
-    flex-wrap: wrap; /* Ensures responsiveness */
+    flex-wrap: wrap; 
     z-index: 2;
 }
 
 /* Hero Content */
 .hero-content p {
-    font-size: 1.6rem; /* Slightly larger for better readability */
+    font-size: 1.6rem; 
     font-weight: 400;
     color: #396161;
-    margin-bottom: 50px; /* Increased spacing below subtext */
-    line-height: 1.3; /* Better text spacing */
-    max-width: 600px; /* Restrict width for better alignment */
-    border-bottom: 3px solid #02587B; /* Add a line below the subtext */
-    padding-bottom: 5px; /* Adds space between the text and the line */
-    width: 70%; /* Adjust width of the line */
+    margin-bottom: 50px; 
+    line-height: 1.3; 
+    max-width: 600px; 
+    border-bottom: 3px solid #02587B; 
+    padding-bottom: 5px; 
+    width: 70%; 
 }
 
 /* KTTBDC Heading */
@@ -187,18 +187,18 @@ nav ul li a:hover {
 
 /* Subtext */
 .hero-content p {
-    font-size: 1.6rem; /* Slightly larger for better readability */
+    font-size: 1.6rem; 
     font-weight: 400;
     color: #396161;
-    margin-bottom: 50px; /* Increased spacing below subtext */
-    line-height: 1.3; /* Better text spacing */
-    max-width: 600px; /* Restrict width for better alignment */
+    margin-bottom: 50px; 
+    line-height: 1.3; 
+    max-width: 600px; 
 }
 
 /* Button Styling (Fixed Width) */
 .btn {
     display: inline-block;
-    font-size: 1.2rem; /* Adjust font size */
+    font-size: 1.2rem;
     font-weight: 600;
     padding: 12px 20px; 
     width: 200px; 
@@ -224,16 +224,16 @@ nav ul li a:hover {
 /* Hero Image */
 .hero-image {
     display: flex;
-    align-items: center; /* Aligns image with text */
+    align-items: center; 
     justify-content: center;
     height: auto;
 }
 
 /* Image Styling */
 .hero-image img {
-    width: 440px; /* Keeps image scalable */
+    width: 440px; 
     object-fit: contain;
-    margin-top: -20px; /* Adjusts alignment with text */
+    margin-top: -20px; 
     padding-top: 0;
 }
 /*Components Unit Styling */
@@ -381,7 +381,7 @@ html {
     height: 60vh;
     background: url('images/components.png') no-repeat center center/cover;
     margin-top: -140px;
-    z-index: -20; /* Keeps it behind */
+    z-index: -20; 
     
 }
 
@@ -423,8 +423,8 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative; /* Allows button to be positioned inside */
-    padding-bottom: 80px; /* Prevents button overlap */
+    position: relative; 
+    padding-bottom: 80px; 
 }
 
 /* Ensuring Circular Image */
@@ -443,7 +443,7 @@ h1 {
     position: absolute;
     bottom: 0; /* Sticks to bottom */
     left: 23%;
-    top: 50%; /* Ensures full centering */
+    top: 50%; 
     padding: 15px 25px;
     border: 3px solid #dcae1d;
     background-color: #dcae1d;
@@ -632,7 +632,7 @@ h1 {
 }
 
 /* Mission & Vision Cards (Equal Sizing for ITSO, KTTO, BINHI) */
-.itso, .ktto, .binhi {
+.itso {
     width: 180px;
     height: 220px;
     background: #ffffff;
@@ -645,13 +645,51 @@ h1 {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color:#0D47A1;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+ .ktto{
+    width: 180px;
+    height: 220px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color:#0D47A1;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
 }
 
+.binhi {
+    width: 180px;
+    height: 220px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color:#0da155;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
 .itso { border: 2px solid #0D47A1; }
 .ktto { border: 2px solid #0D47A1; }
 .binhi { border: 2px solid #0da155; }
@@ -872,7 +910,7 @@ h1 {
 .about-content p {
     font-size: 16px;
     line-height: 1.6;
-    color: #454e4e; 
+    color: #004996; 
     text-align: initial;
 }
 
@@ -964,7 +1002,7 @@ h1 {
 /* Text Styling */
 .goal p {
     font-size: 16px;
-    color: #454e4e;
+    color: #004996;
     text-align: left;
     line-height: 1.5;
     flex: 0.9;
@@ -1059,7 +1097,7 @@ h1 {
 /* Text */
 .objective p {
     font-size: 16px;
-    color: #396161;
+    color: #004996;
     text-align: left;
     flex: 1;
     margin: 0 20px;
@@ -1068,13 +1106,13 @@ h1 {
 /* Icon */
 .objective-icon {
     width: 80px;
-    height: 80px; /* Set height and width to make the icon square */
+    height: 80px; 
     border-radius: 50%; /* Makes the icon circular */
-    border: 3px solid #396161; /* Add a border with the desired color */
+    border: 3px solid #396161; 
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff; /* Optional: Background color for the circle */
+    background-color: #fff; 
 }
 
 /* Responsive Design */
@@ -1090,7 +1128,7 @@ h1 {
 
     .objective-icon {
         width: 50px;
-        height: 50px; /* Adjust the size for smaller screens */
+        height: 50px; 
     }
 }
 
@@ -1203,7 +1241,7 @@ body, html {
 }
 
 .background {
-    position: relative; /* Required for pseudo-element positioning */
+    position: relative; 
     margin-top: 90px;
     padding-bottom: 100px;
     display: flex;
@@ -1211,12 +1249,12 @@ body, html {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    position: relative;  /*Ensure the wave is positioned relative to this container */
+    position: relative;  
 }
 
 .background::before {
-    content: ""; /* Required for pseudo-elements */
-    position: absolute; /* Position the overlay */
+    content: ""; 
+    position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
@@ -1225,14 +1263,14 @@ body, html {
     /*background-image: inherit; /* Use the same background image */
     background-size: cover;
     background-position: center;
-    opacity: 0.1; /* Set the opacity of the background image only */
-    z-index: -1; /* Place it behind the content */
+    opacity: 0.1; 
+    z-index: -1; 
 }
 
 .content {
     text-align: center;
     color: #00303F;
-    flex: 1; /* Allow content to grow and push the wave to the bottom */
+    flex: 1; 
     width: 100%;
 }
 
@@ -1247,7 +1285,7 @@ h1 {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    padding-bottom: 80px; /* Add padding to avoid overlap with the wave */
+    padding-bottom: 80px; 
 }
 
 .team-member {
@@ -1260,7 +1298,7 @@ h1 {
 }
 
 .team-member.large {
-    margin-bottom: 50px; /* Add gap between large team member and the grid */
+    margin-bottom: 50px; 
 }
 
 .team-member.large .image-wrapper {
@@ -1284,7 +1322,7 @@ h1 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 90%; /* Slightly shorter than the image */
+    height: 90%; 
     background: linear-gradient(to bottom, rgba(93, 179, 194, 0.8), white);
     border-radius: 10px;
 }
@@ -1316,7 +1354,7 @@ h1 {
 .team-member p {
     font-size: 13px;
     font-style: italic;
-    color: #719495;
+    color: #004996;
     margin-top: 4px;
 }
 
@@ -1332,7 +1370,7 @@ h1 {
     bottom: -50px;
     left: 0;
     width: 100%;
-    height: 300px; /* Adjust height as needed */
+    height: 300px; 
     background-image: url('images/wave.png');
     background-size: cover;
     background-position: bottom;
@@ -1392,7 +1430,7 @@ h2 {
 /* Looping Animation */
 @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-1500px); } /* Moves left by 15 images */
+    100% { transform: translateX(-1500px); } 
 }
 /*Contact Section*/
 
@@ -1417,23 +1455,23 @@ body {
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: center; /* Center content */
+    justify-content: center; 
     align-items: center;
     max-width: 1100px;
-    width: 90%; /* Prevent full stretch */
+    width: 90%; 
     margin: 50px auto;
     padding: 40px;
-    gap: 40px; /* Increased gap for proper spacing */
+    gap: 40px; /
 }
 
 .form-container {
     flex: 1;
     padding: 25px;
     background: white;
-    border: 2.3px solid #004996;
+    border: 2.3px solid #02587B;
     border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    max-width: 450px; /* Reduced width */
+    box-shadow: 0 6px 12px #004996(0, 0, 0, 0.15);
+    max-width: 450px; 
     width: 100%;
 }
 
@@ -1452,7 +1490,7 @@ h2 {
 
 p {
     font-size: 16px;
-    color: #396161;
+    color: #004996;
     margin-top: 5px;
 }
 
@@ -1474,7 +1512,7 @@ label {
 }
 
 input, textarea {
-    width: calc(100% - 24px); /* Prevents stretching */
+    width: calc(100% - 24px); 
     padding: 12px;
     border: 1.5px solid #00303F;
     border-radius: 5px;
