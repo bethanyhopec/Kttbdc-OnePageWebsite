@@ -38,8 +38,8 @@ header {
 /* Logo Image */
 .logo-container img {
     height: 70px;
-    margin-left: -10%; /* Slight left margin */
-    margin-top: -25px; /* Adjusted to move the logo slightly higher */
+    margin-left: -10%; 
+    margin-top: -25px; 
 }
 
 /* Text Beside Logo */
@@ -58,17 +58,17 @@ header {
     -webkit-text-fill-color: transparent;
     margin: 0;
     margin-left: -5%;
-    margin-top: -5px; /* Moves text slightly higher */
-    line-height: 1; /* Ensures text is not too spaced out */
+    margin-top: -5px; 
+    line-height: 1;
 }
 
 .logo-text p {
-    font-size: 0.27rem; /* Increased for better readability */
+    font-size: 0.27rem; 
     font-weight: 400;
     color: #004996;
     margin: 0;
     margin-left: -5%;
-    margin-top: -2px; /* Slightly raises paragraph text */
+    margin-top: -2px; 
 }
 
 /* Navigation Menu */
@@ -109,22 +109,20 @@ nav ul li a:hover {
     transform: translateX(-50%);
     background: #F2FFFB;
     border-radius: 8px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 5px 15px rgba(41, 60, 228, 0.1); 
     display: none;
     padding: 12px 20px;
-    min-width: 200px; 
+    min-width: 300px; 
     z-index: 10; 
-    transition: all 0.3s ease-in-out; /* Smooth dropdown effect */
+    transition: all 0.3s ease-in-out; 
 }
 
-/* Show dropdown on hover */
 .dropdown:hover .dropdown-menu {
     display: block;
     opacity: 1;
-    transform: translate(-50%, 5px); /* Small drop-down effect */
+    transform: translate(-50%, 5px); 
 }
 
-/* Dropdown List Items */
 .dropdown-menu li {
     padding: 10px 20px;
 }
@@ -381,7 +379,7 @@ html {
     height: 60vh;
     background: url('images/components.png') no-repeat center center/cover;
     margin-top: -140px;
-    z-index: -20; /* Keeps it behind */
+    z-index: -20; 
     
 }
 
@@ -423,45 +421,43 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative; /* Allows button to be positioned inside */
-    padding-bottom: 80px; /* Prevents button overlap */
+    position: relative; 
+    padding-bottom: 80px; 
 }
 
-/* Ensuring Circular Image */
 .logo-card img {
     width: 250px;
     height: 260px;
     object-fit: cover; 
-    border-radius: 5%; /* Fix for perfect circle */
+    border-radius: 5%; 
     padding: 20px;
     bottom: 60%;
     transition: transform 0.3s ease-in-out;
 }
 
-/* Button Positioned Below Image */
 .logo-card button {
     position: absolute;
-    bottom: 0; /* Sticks to bottom */
+    bottom: 0; 
     left: 23%;
-    top: 50%; /* Ensures full centering */
+    top: 50%; 
     padding: 15px 25px;
-    border: 3px solid #dcae1d;
     background-color: #dcae1d;
     color:white;
     font-weight: bold;
     font-size: 12px;
     cursor: pointer;
     border-radius: 12px;
-    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+    transition: background-color 0.3s ease-in-out; 
 }
 
-/* Hover Effect - No Position Change */
 .logo-card:hover button {
     background-color: #a0cac2;
     font-weight: bolder;
     color:#002855;
-    border:none;
+    border:  #a0cac2;
+    transition: background-color 0.3s ease-in-out; 
 }
+
 /* General Pop-up Styles */
 .popup {
     display: none;
@@ -473,7 +469,7 @@ h1 {
     max-width: 900px;
     height: 80%;
     border-radius: 12px;
-    box-shadow: 0px 8px 20px rgba(0, 64, 128, 0.5);
+    box-shadow: 100px 100px 100px rgba(0, 64, 128, 0.5);
     animation: fadeIn 0.3s ease-in-out;
     padding: 30px;
     z-index: 1000;
@@ -497,15 +493,15 @@ h1 {
 
 /* Background Colors */
 .popup-itso {
-    background: linear-gradient(to right, #253bc5, #ffffff); /* Yellow */
+    background: linear-gradient(to right, #004996, #ffffff); 
 }
 
 .popup-ktto {
-    background: linear-gradient(to right, #96c9ff, #ffffff); /* Red */
+    background: linear-gradient(to right, #96c9ff, #ffffff); 
 }
 
 .popup-binhi {
-    background: linear-gradient(to right, #66cc66, #ffffff); /* Green */
+    background: linear-gradient(to right, #66cc66, #ffffff); 
 }
 
 .popup h2 {
@@ -525,7 +521,7 @@ h1 {
     margin-right: 55px;
     font-size: 50px;
     font-weight: bold;
-    color: #0c9342;
+    color: #0da130;
     margin-bottom: 10px;
 }
 /* Pop-up Close Button */
@@ -536,7 +532,7 @@ h1 {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
-    color: #333;
+    color: #002855;
     background: white;
     border-radius: 50%;
     width: 30px;
@@ -553,7 +549,7 @@ h1 {
     transform: scale(1.1);
 }
 .popup-binhi .close-btn:hover {
-    background: #1c8e14;
+    background: #0da130;
     color: white;
     transform: scale(1.1);
 }
@@ -578,7 +574,7 @@ h1 {
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(16, 51, 180, 0.15);
-    border-bottom: 4px solid #0da130;
+    border-bottom: 6px solid #0da130;
     
 }
 
@@ -588,7 +584,7 @@ h1 {
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(16, 51, 180, 0.15);
-    border-bottom: 4px solid #0D47A1;
+    border-bottom: 6px solid #0D47A1;
     
 }
 
@@ -623,7 +619,8 @@ h1 {
 .prev:hover, .next:hover {
     background: rgba(255, 255, 255, 0.7);
     color: black;
-}/* Standardized Right Side Content */
+}
+
 .right-content {
     flex: 1;
     display: flex;
@@ -631,7 +628,7 @@ h1 {
     gap: 20px;
 }
 
-/* Mission & Vision Cards (Equal Sizing for ITSO, KTTO, BINHI) */
+/* Mission & Vision Cards */
 .itso {
     width: 180px;
     height: 220px;
