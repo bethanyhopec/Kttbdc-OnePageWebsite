@@ -32,7 +32,7 @@ header {
 .logo-container {
     display: flex;
     align-items: left;
-    gap: -50px; /* Reduced gap to bring the text closer */
+    gap: -50px; 
 }
 
 /* Logo Image */
@@ -58,8 +58,8 @@ header {
     -webkit-text-fill-color: transparent;
     margin: 0;
     margin-left: -5%;
-    margin-top: -5px; 
-    line-height: 1;
+    margin-top: -5px; /* Moves text slightly higher */
+    line-height: 1; /* Ensures text is not too spaced out */
 }
 
 .logo-text p {
@@ -149,26 +149,26 @@ nav ul li a:hover {
 .hero {
     background: url('images/background.png') no-repeat center center/cover;
     display: flex;
-    align-items: center; /* Aligns image with text */
+    align-items: center; 
     justify-content: space-between;
     max-width: 1200px;
-    margin: 100px auto 0; /* Adjusted margin for better spacing */
+    margin: 100px auto 0; 
     padding: 100px 100px;
-    flex-wrap: wrap; /* Ensures responsiveness */
+    flex-wrap: wrap; 
     z-index: 2;
 }
 
 /* Hero Content */
 .hero-content p {
-    font-size: 1.6rem; /* Slightly larger for better readability */
+    font-size: 1.6rem; 
     font-weight: 400;
     color: #396161;
-    margin-bottom: 50px; /* Increased spacing below subtext */
-    line-height: 1.3; /* Better text spacing */
-    max-width: 600px; /* Restrict width for better alignment */
-    border-bottom: 3px solid #02587B; /* Add a line below the subtext */
-    padding-bottom: 5px; /* Adds space between the text and the line */
-    width: 70%; /* Adjust width of the line */
+    margin-bottom: 50px; 
+    line-height: 1.3; 
+    max-width: 600px; 
+    border-bottom: 3px solid #02587B; 
+    padding-bottom: 5px; 
+    width: 70%; 
 }
 
 /* KTTBDC Heading */
@@ -185,18 +185,18 @@ nav ul li a:hover {
 
 /* Subtext */
 .hero-content p {
-    font-size: 1.6rem; /* Slightly larger for better readability */
+    font-size: 1.6rem; 
     font-weight: 400;
     color: #396161;
-    margin-bottom: 50px; /* Increased spacing below subtext */
-    line-height: 1.3; /* Better text spacing */
-    max-width: 600px; /* Restrict width for better alignment */
+    margin-bottom: 50px; 
+    line-height: 1.3; 
+    max-width: 600px; 
 }
 
 /* Button Styling (Fixed Width) */
 .btn {
     display: inline-block;
-    font-size: 1.2rem; /* Adjust font size */
+    font-size: 1.2rem;
     font-weight: 600;
     padding: 12px 20px; 
     width: 200px; 
@@ -222,16 +222,16 @@ nav ul li a:hover {
 /* Hero Image */
 .hero-image {
     display: flex;
-    align-items: center; /* Aligns image with text */
+    align-items: center; 
     justify-content: center;
     height: auto;
 }
 
 /* Image Styling */
 .hero-image img {
-    width: 440px; /* Keeps image scalable */
+    width: 440px; 
     object-fit: contain;
-    margin-top: -20px; /* Adjusts alignment with text */
+    margin-top: -20px; 
     padding-top: 0;
 }
 /*Components Unit Styling */
@@ -843,70 +843,35 @@ h1 {
     }
 }
 
-.text-marquee {
+.text-marquee { 
     width: 48%;
     overflow: hidden;
     white-space: nowrap;
     position: absolute;
-    bottom: 55px; 
-    left: 40px;
-    padding: 10px 0;
-}
-
-.text-marquee span {
+    bottom: 180px;/* adjust based on your popup position */
+  }
+  
+  .text-marquee span {
     display: inline-block;
     white-space: nowrap;
-    font-size: 20px;
-    color: white; 
-    animation: scroll-left 15s linear infinite;
-    font-family: sans-serif;
-}
-
-.popup-ktto .text-marquee {
-    width: 48%;
-    overflow: hidden;
-    white-space: nowrap;
-    position: absolute;
-    bottom: 55px; 
-    left: 40px;
-    padding: 10px 0;
-}
-
-.popup-ktto .text-marquee span {
-    display: inline-block;
-    white-space: nowrap;
-    font-size: 20px; 
-    color: rgb(6, 35, 221); 
-    animation: scroll-left 12s linear infinite loop;
-    font-family: sans-serif;
-}
-
-.popup-binhi .text-marquee {
-    width: 48%;
-    overflow: hidden;
-    white-space: nowrap;
-    position: absolute;
-    bottom: 55px; 
-    left: 40px;
-    padding: 10px 0;
-}
-
-.popup-binhi .text-marquee span {
-    display: inline-block;
-    white-space: nowrap;
-    font-size: 20px; 
-    color: rgb(8, 156, 60); 
-    animation: scroll-left 12s linear infinite loop;
-    font-family: sans-serif;
-}
-@keyframes scroll-left {
-    0% {
-        transform: translateX(100%);
+    padding-left: translatex(10%);
+    animation: scroll-left 8s linear infinite;
+    font-size: 30px; /* Customize font-size, color, etc. */
+    color: #000; /* Customize text color */
+    padding-block: 8px;
+    border-block: 1px solid;
+    animation: scroll-left 4s linear infinite;
+   
+  }
+  
+  @keyframes scroll-left {
+      0% {
+        transform: translateX(20%); /* Start at 50% from right */
+      }
+      100% {
+        transform: translateX(-100%); /* End at -50% left */
+      }
     }
-    100% {
-        transform: translateX(-100%);
-    }
-}
 
 /* About Us Section */
 .about-us {
@@ -942,7 +907,7 @@ h1 {
 .about-content p {
     font-size: 16px;
     line-height: 1.6;
-    color: #454e4e; 
+    color: #004996; 
     text-align: initial;
 }
 
@@ -1034,7 +999,7 @@ h1 {
 /* Text Styling */
 .goal p {
     font-size: 16px;
-    color: #454e4e;
+    color: #004996;
     text-align: left;
     line-height: 1.5;
     flex: 0.9;
@@ -1129,7 +1094,7 @@ h1 {
 /* Text */
 .objective p {
     font-size: 16px;
-    color: #396161;
+    color: #004996;
     text-align: left;
     flex: 1;
     margin: 0 20px;
@@ -1138,13 +1103,13 @@ h1 {
 /* Icon */
 .objective-icon {
     width: 80px;
-    height: 80px; /* Set height and width to make the icon square */
+    height: 80px; 
     border-radius: 50%; /* Makes the icon circular */
-    border: 3px solid #396161; /* Add a border with the desired color */
+    border: 3px solid #396161; 
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff; /* Optional: Background color for the circle */
+    background-color: #fff; 
 }
 
 /* Responsive Design */
@@ -1160,7 +1125,7 @@ h1 {
 
     .objective-icon {
         width: 50px;
-        height: 50px; /* Adjust the size for smaller screens */
+        height: 50px; 
     }
 }
 
@@ -1273,7 +1238,7 @@ body, html {
 }
 
 .background {
-    position: relative; /* Required for pseudo-element positioning */
+    position: relative; 
     margin-top: 90px;
     padding-bottom: 100px;
     display: flex;
@@ -1281,12 +1246,12 @@ body, html {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    position: relative;  /*Ensure the wave is positioned relative to this container */
+    position: relative;  
 }
 
 .background::before {
-    content: ""; /* Required for pseudo-elements */
-    position: absolute; /* Position the overlay */
+    content: ""; 
+    position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
@@ -1295,14 +1260,14 @@ body, html {
     /*background-image: inherit; /* Use the same background image */
     background-size: cover;
     background-position: center;
-    opacity: 0.1; /* Set the opacity of the background image only */
-    z-index: -1; /* Place it behind the content */
+    opacity: 0.1; 
+    z-index: -1; 
 }
 
 .content {
     text-align: center;
     color: #00303F;
-    flex: 1; /* Allow content to grow and push the wave to the bottom */
+    flex: 1; 
     width: 100%;
 }
 
@@ -1317,7 +1282,7 @@ h1 {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    padding-bottom: 80px; /* Add padding to avoid overlap with the wave */
+    padding-bottom: 80px; 
 }
 
 .team-member {
@@ -1330,7 +1295,7 @@ h1 {
 }
 
 .team-member.large {
-    margin-bottom: 50px; /* Add gap between large team member and the grid */
+    margin-bottom: 50px; 
 }
 
 .team-member.large .image-wrapper {
@@ -1354,7 +1319,7 @@ h1 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 90%; /* Slightly shorter than the image */
+    height: 90%; 
     background: linear-gradient(to bottom, rgba(93, 179, 194, 0.8), white);
     border-radius: 10px;
 }
@@ -1386,7 +1351,7 @@ h1 {
 .team-member p {
     font-size: 13px;
     font-style: italic;
-    color: #719495;
+    color: #004996;
     margin-top: 4px;
 }
 
@@ -1402,7 +1367,7 @@ h1 {
     bottom: -50px;
     left: 0;
     width: 100%;
-    height: 300px; /* Adjust height as needed */
+    height: 300px; 
     background-image: url('images/wave.png');
     background-size: cover;
     background-position: bottom;
@@ -1462,7 +1427,7 @@ h2 {
 /* Looping Animation */
 @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-1500px); } /* Moves left by 15 images */
+    100% { transform: translateX(-1500px); } 
 }
 /*Contact Section*/
 
@@ -1487,23 +1452,23 @@ body {
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: center; /* Center content */
+    justify-content: center; 
     align-items: center;
     max-width: 1100px;
-    width: 90%; /* Prevent full stretch */
+    width: 90%; 
     margin: 50px auto;
     padding: 40px;
-    gap: 40px; /* Increased gap for proper spacing */
+    gap: 40px; /
 }
 
 .form-container {
     flex: 1;
     padding: 25px;
     background: white;
-    border: 2.3px solid #004996;
+    border: 2.3px solid #02587B;
     border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    max-width: 450px; /* Reduced width */
+    box-shadow: 0 6px 12px #004996(0, 0, 0, 0.15);
+    max-width: 450px; 
     width: 100%;
 }
 
@@ -1522,7 +1487,7 @@ h2 {
 
 p {
     font-size: 16px;
-    color: #396161;
+    color: #004996;
     margin-top: 5px;
 }
 
@@ -1544,7 +1509,7 @@ label {
 }
 
 input, textarea {
-    width: calc(100% - 24px); /* Prevents stretching */
+    width: calc(100% - 24px); 
     padding: 12px;
     border: 1.5px solid #00303F;
     border-radius: 5px;
