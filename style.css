@@ -910,30 +910,54 @@ h1 {
 
 /* About Us Section */
 .about-us {
-    background-color: white; 
-    padding: 100px 15%;
+    background-color: white;
+    padding: 100px 10%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
+/* ABOUT US Title */
+.about-us h2 {
+    color: #003366;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Main Container (About Us Image + Mission & Vision) */
 .about-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /* Image on the left, text on the right */
     max-width: 1200px;
     width: 100%;
 }
 
+/* Image Section */
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+}
+
+/* Content Styling (Mission & Vision) */
 .about-content {
     flex: 1;
     padding: 20px;
+    text-align: left;
 }
 
-
 .about-content h3 {
-    color: #002E91; /* Lighter blue */
+    color: #002E91;
     font-size: 22px;
     font-weight: 600;
     margin-top: 20px;
@@ -942,41 +966,45 @@ h1 {
 .about-content p {
     font-size: 16px;
     line-height: 1.6;
-    color: #454e4e; 
-    text-align: initial;
-}
-
-.about-image {
-    flex: 1;
-    text-align: left;
-    color: #003366; 
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 20%;
-    }
-
-
-.about-image img {
-    width: 450px; 
-    max-width: 100%;
-    height: 1100%;
-    padding: 80px, 150px;
-    margin-right:90%;
-    
+    color: #454e4e;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .about-us {
+        padding: 50px 5%;
+    }
+
     .about-container {
-        flex-direction: column;
+        flex-direction: column; /* Stack elements in order */
         text-align: center;
     }
 
+    /* Ensure About Us & Image are at the top */
+    .about-image {
+        order: -1; /* Moves image above Mission & Vision */
+    }
+
     .about-image img {
-        width: 200px;
-        margin-top: 20px;
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .about-content {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .about-content h3 {
+        font-size: 20px;
+    }
+
+    .about-content p {
+        font-size: 14px;
     }
 }
+
+
 /*Our goals*/
 .our-goals {
     text-align: center;
@@ -1487,13 +1515,13 @@ body {
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: center; /* Center content */
+    justify-content: center;
     align-items: center;
     max-width: 1100px;
-    width: 90%; /* Prevent full stretch */
+    width: 90%;
     margin: 50px auto;
     padding: 40px;
-    gap: 40px; /* Increased gap for proper spacing */
+    gap: 40px;
 }
 
 .form-container {
@@ -1503,7 +1531,7 @@ body {
     border: 2.3px solid #004996;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    max-width: 450px; /* Reduced width */
+    max-width: 450px;
     width: 100%;
 }
 
@@ -1518,6 +1546,7 @@ h2 {
     font-size: 36px;
     font-weight: bold;
     color:#004996;
+    text-align: left;
 }
 
 p {
@@ -1527,12 +1556,12 @@ p {
 }
 
 hr {
-    width: 150px;
+    width: 100px;
     height: 3px;
-    background-color: #DCAE1D;
+    background-color: #dcae1d;
     border: none;
-    margin-top: 10px;
-    margin-left: 0;
+    margin: 10px auto;
+    display: block;
 }
 
 label {
@@ -1544,7 +1573,7 @@ label {
 }
 
 input, textarea {
-    width: calc(100% - 24px); /* Prevents stretching */
+    width: calc(100% - 24px);
     padding: 12px;
     border: 1.5px solid #00303F;
     border-radius: 5px;
@@ -1583,22 +1612,6 @@ button:hover {
     color:#004996;
     transform: scale(1.05);
 }
-.success-message {
-    display: none;
-    color: white;
-    background-color: #4CAF50;
-    padding: 10px;
-    margin-top: 15px;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 16px;
-    animation: fadeIn 0.5s;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
 
 .info-container {
     width: 50%;
@@ -1606,45 +1619,66 @@ button:hover {
     padding-bottom: 5px;
     max-width: 70%;
 }
-.info-container::after {
-    content: "";
-    display: block;
-    width: 30%;
-    border-bottom: 3px solid #dcae1d;
-    margin-top: 5px;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        text-align: center;
+        text-align: none;
         gap: 20px;
     }
 
     .text-container {
         padding: 10px;
+        text-align: center;
+        order: -2;
+    }
+
+    .text-container h2, .text-container p {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .text-container h2 {
+        order: -3;
+    }
+
+    .text-container p {
+        order: -2;
     }
 
     .form-container {
         max-width: 100%;
+        width: 90%;
+        padding: 20px;
+        order: -1;
     }
 
-    .button-container {
-        text-align: center;
+    hr {
+        display: none;
+    }
+    
+    .footer-branding img {
+        display: none;
     }
 
-    .success-message {
-        display: none; /* Hidden by default */
-        color: white;
-        background-color: #396161;
-        padding: 10px;
-        margin-top: 10px;
-        border-radius: 5px;
-        text-align: center;
-        font-size: 16px;
-    } 
+    .links a {
+        font-size: 12px; /* Smaller font for mobile links */
+    }
 }
+
+@media (min-width: 769px) {
+    .text-container h2 {
+        text-align: left;
+    }
+    
+    hr {
+        display: block;
+        margin-left: 0;
+    }
+}
+
 /*footer*/
 .footer-container {
     display: flex;
@@ -1656,10 +1690,6 @@ button:hover {
 .footer-branding {
     display: flex;
     align-items: center;
-}
-.footer-branding img {
-    height: 50px;
-    margin-right: 10px;
 }
 .footer-text {
     display: flex;
@@ -1685,11 +1715,9 @@ button:hover {
 }
 .links a {
     text-decoration: none;
-    font-size: 20;
     font-family: sans-serif;
     color: #09323F;
     margin: 5px 5;
-
 }
 .social-icons {
     display: flex;
