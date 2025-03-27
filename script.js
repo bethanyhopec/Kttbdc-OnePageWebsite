@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// EmailJS Integration
 document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault();
     let isValid = true;
@@ -64,10 +65,12 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     const message = document.getElementById("message").value.trim();
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
+    // Clear previous error messages
     document.getElementById("nameError").textContent = "";
     document.getElementById("emailError").textContent = "";
     document.getElementById("messageError").textContent = "";
 
+    // Validation
     if (name === "") {
         document.getElementById("nameError").textContent = "Name is required.";
         isValid = false;
@@ -82,12 +85,28 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     }
 
     if (isValid) {
-        document.getElementById("successMessage").style.display = "block";
-        setTimeout(() => {
-            document.getElementById("successMessage").style.display = "none";
-        }, 2000);
-        
-        this.reset();
+        const submitBtn = document.getElementById("submitBtn");
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+
+        // Send email using EmailJS
+        emailjs.sendForm('service_r34v9bs', 'template_e0vvbje', this)
+            .then(() => {
+                document.getElementById("successMessage").style.display = "block";
+                document.getElementById("contactForm").reset();
+                
+                setTimeout(() => {
+                    document.getElementById("successMessage").style.display = "none";
+                }, 3000);
+            })
+            .catch((error) => {
+                alert("Failed to send message. Please try again later.");
+                console.error("EmailJS Error:", error);
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Submit";
+            });
     }
 });
 
