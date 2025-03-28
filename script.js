@@ -55,6 +55,37 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Mobile menu functionality
+document.addEventListener("DOMContentLoaded", function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const nav = document.querySelector('nav ul');
+    
+    mobileMenu.addEventListener('click', function() {
+        this.classList.toggle('active');
+        nav.classList.toggle('active');
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.dropdown') && !event.target.closest('#mobile-menu')) {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.style.display = 'none';
+            });
+        }
+    });
+    
+    // Handle dropdown clicks on mobile
+    document.querySelectorAll('.dropdown > a').forEach(item => {
+        item.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                const menu = this.nextElementSibling;
+                menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+            }
+        });
+    });
+});
+
 // EmailJS Integration
 document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault();
