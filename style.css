@@ -1310,7 +1310,7 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     overflow: hidden;
     position: relative;  /*Ensure the wave is positioned relative to this container */
 }
@@ -1346,9 +1346,13 @@ h1 {
 .team-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Changed from center to flex-start to align at top */
     margin-top: 20px;
-    padding-bottom: 80px; /* Add padding to avoid overlap with the wave */
+    padding-bottom: 80px;
+    width: 100%;
+    max-width: 1200px; /* Added max-width for better control */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .team-member {
@@ -1361,12 +1365,13 @@ h1 {
 }
 
 .team-member.large {
-    margin-bottom: 50px; /* Add gap between large team member and the grid */
+    margin-bottom: 0; /* Remove bottom margin */
+    margin-right: 50px; /* Add space between large member and grid*/
 }
 
 .team-member.large .image-wrapper {
     width: 100%;
-    height: 450px;
+    height: 400px;
 }
 
 .team-member .image-wrapper {
@@ -1425,6 +1430,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
+    align-self: flex-start; /* Align grid to top */
 }
 
 /* Class for the wave image */
@@ -1437,6 +1443,22 @@ h1 {
     background-image: url('images/wave.png');
     background-size: cover;
     background-position: bottom;
+}
+
+/* For larger screens, adjust the layout */
+@media (min-width: 1024px) {
+    .team-container {
+        flex-direction: row; /* Ensure horizontal layout */
+        align-items: flex-start; /* Align items at top */
+    }
+    
+    .team-member.large {
+        width: auto; /* Let it take natural width */
+    }
+    
+    .team-members-grid {
+        margin-top: 0; /* Remove any top margin */
+    }
 }
 
 /* Our Team Section - Mobile View */
