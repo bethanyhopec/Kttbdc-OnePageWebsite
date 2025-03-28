@@ -86,6 +86,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+
 // EmailJS Integration
 document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault();
