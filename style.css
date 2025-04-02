@@ -453,8 +453,8 @@ h1 {
     left: 23%;
     top: 50%; 
     padding: 15px 25px;
-    background-color: #dcae1d;
-    color:white;
+    background-color: #ffffff;
+    color:#1e4666;;
     font-weight: bold;
     font-size: 12px;
     cursor: pointer;
@@ -463,7 +463,7 @@ h1 {
 }
 
 .logo-card:hover button {
-    background-color: #a0cac2;
+    background-color: #dcae1d;
     font-weight: bolder;
     color:#002855;
     border:  #a0cac2;
