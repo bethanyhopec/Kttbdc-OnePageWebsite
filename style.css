@@ -1432,6 +1432,17 @@ h1 {
     margin-bottom: 30px;
 }
 
+/* Yellow Divider Line Below Title */
+.our-objectives h2::after {
+    content: "";
+    display: block;
+    width: 200px; /* Length of the line */
+    height: 4px; /* Thickness */
+    background-color: #FFD700; /* Yellow Color */
+    margin: 10px auto 0; /* Centering below the title */
+    border-radius: 5px;
+}
+
 /* Objectives Container */
 .objectives-container {
     display: flex;
@@ -1442,45 +1453,88 @@ h1 {
     margin: 0 auto;
 }
 
-/* Objective Item */
+/* Our Objectives Section */
+.our-objectives {
+    text-align: center;
+    padding: 80px 10px;
+    background-color: #ffffff;
+}
+
+/* Centered Title */
+.our-objectives h2 {
+    color: #004080;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-left: 1.5% !important;
+}
+
+/* Objectives Container */
+.objectives-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Objective Item Box */
 .objective {
     display: flex;
-    align-items: left;
+    align-items: center; /* Align icon and text side by side */
+    width: 100%;
     padding: 20px;
     border-radius: 15px;
-    width: 100%;
-}
-
-/* Alternate Left-Right Layout */
-.objective {
-    flex-direction: row-reverse;
-}
-
-.objective {
-    flex-direction: row;
-}
-
-/* Text */
-.objective p {
-    font-size: 16px;
-    color: #396161;
+    background: #f8f9fa; /* Light gray background */
+    border: 2px solid #004080; /* Blue border for definition */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
-    flex: 1;
-    margin: 0 20px;
+    gap: 15px; /* Spacing between icon and text */
 }
 
-/* Icon */
+/* Objective Icon */
 .objective-icon {
-    width: 80px;
-    height: 80px; /* Set height and width to make the icon square */
-    border-radius: 50%; /* Makes the icon circular */
-    border: 3px solid #396161; /* Add a border with the desired color */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #396161;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff; /* Optional: Background color for the circle */
+    background-color: #fff;
+    flex-shrink: 0; /* Prevents icon from shrinking */
 }
 
+/* Objective Text */
+.objective p {
+    font-size: 16px;
+    color: #396161;
+    text-align: justify;
+    margin: 0;
+    flex: 1; /* Allows text to take up remaining space */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .objective {
+        width: 90%; /* Keeps the box visible with edge space */
+        max-width: 100%; /* Ensures full width on smaller screens */
+        padding: 15px; /* Adjust padding for better spacing */
+        gap: 10px; /* Reduce space between icon and text */
+    }
+    
+    .objective-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .objective p {
+        text-align: center;
+        font-size: 14px;
+    }
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .objective {
