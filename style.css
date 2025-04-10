@@ -1940,11 +1940,14 @@ body, html {
     width: 100%;
 }
 
-h1 {
-    font-size: 48px;
-    font-weight: 900;
-    margin-top: 50px;
-    margin-bottom: 0;
+.team-heading {
+    color: #004080;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 80px;
+    margin-bottom: 30px;
+    position: relative;
 }
 
 .team-container {
