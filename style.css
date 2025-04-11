@@ -1,22 +1,30 @@
+@import url('https://fonts.googleapis.com/css2family=Monserrat:wght@600&family=Poppins&display=swap');
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
+*{
     padding: 0;
-    background: white;
+    margin: 0;
+    text-decoration:none;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
 }
-
+.hero{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
 /* Header */
 header {
     background: white;
     padding: 0px 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px #09323F solid !important;
+    border-bottom: 1px #c2efdd solid !important;
     position: fixed;
     width: 100%;
     height: 16%;
     top: 0;
-    z-index: 1000;
+    z-index: 99;
+    animation: to_bottom 1s ease forwards;
 }
 
 /* Header Container */
@@ -30,7 +38,7 @@ header {
 }
 
 nav {
-    margin-left: auto; /* Push the nav to the right */
+    margin-left: auto; 
 }
 
 nav ul {
@@ -41,48 +49,11 @@ nav ul {
     margin: 0;
 }
 
-/* Logo + Text Container */
-.logo-container {
-    display: flex;
-    align-items: left;
-    gap: -50px; /* Reduced gap to bring the text closer */
-}
-
-/* Logo Image */
 .logo-container img {
-    height: 120px;
+    height: 70px;
     margin-left: 20%; 
     margin-top: 10px; 
 
-}
-
-/* Text Beside Logo */
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: left;
-}
-
-.logo-text h1 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    background: linear-gradient(150deg, #004996, #000000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0;
-    margin-left: -5%;
-    margin-top: -5px; 
-    line-height: 1;
-}
-
-.logo-text p {
-    font-size: 0.27rem; 
-    font-weight: 400;
-    color: #004996;
-    margin: 0;
-    margin-left: -5%;
-    margin-top: -2px; 
 }
 
 /* Navigation Menu */
@@ -126,7 +97,7 @@ nav ul li a:hover {
     box-shadow: 0px 5px 15px rgba(41, 60, 228, 0.1); 
     display: none;
     padding: 12px 20px;
-    min-width: 300px; 
+    min-width: 350px; 
     z-index: 10; 
     transition: all 0.3s ease-in-out; 
 }
@@ -159,55 +130,71 @@ nav ul li a:hover {
     padding: 10px 20px;
 }
 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: #333;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+   
 /* Hero Section */
 .hero {
-    background: url('images/background.png') no-repeat center center/cover;
+    background: linear-gradient(135deg, #ffffff 20%, #c2efdd 100%);
     display: flex;
-    align-items: center; /* Aligns image with text */
+    align-items: center; 
     justify-content: space-between;
-    max-width: 1200px;
-    margin: 100px auto 0; /* Adjusted margin for better spacing */
+    max-width: 1440px;
+    min-width: 468px;
+    margin: 100px auto 0; 
     padding: 100px 100px;
-    flex-wrap: wrap; /* Ensures responsiveness */
+    flex-wrap: wrap; 
     z-index: 2;
 }
 
 /* Hero Content */
 .hero-content p {
-    font-size: 1.4rem; /* Slightly larger for better readability */
+    font-size: 1.4rem; 
     font-weight: 400;
     color: #396161;
-    margin-bottom: 50px; /* Increased spacing below subtext */
-    line-height: 1.3; /* Better text spacing */
-    max-width: 600px; /* Restrict width for better alignment */
-    border-bottom: 3px solid #02587B; /* Add a line below the subtext */
-    padding-bottom: 5px; /* Adds space between the text and the line */
-    width: 70%; /* Adjust width of the line */
+    margin-bottom: 50px; 
+    line-height: 1.3; 
+    max-width: 600px; 
+    padding-bottom: 5px; 
+    width: 70%; 
 }
 
 /* KTTBDC Heading */
 .hero-content h1 {
-    font-size: 9.5rem !important; /* Large heading */
-    font-weight: 700;
-    background: linear-gradient(150deg, #004996, #000000); /* Gradient effect */
+    font-size: 150px;
+    background: linear-gradient(150deg, #004996, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: -5px;
-    margin-bottom: -20px; 
+    animation: to_right 1s ease forwards .8s;
     line-height: 1.3; 
+}
+.hero-content h1 span:nth-child(2){
+    animation-delay: .9s;
 }
 
 /* Subtext */
 .hero-content p {
-    font-size: 1.6rem; /* Slightly larger for better readability */
-    font-weight: 400;
+    font-size: 30px;
+    width:100%;
     color: #396161;
+    animation: to_right 1s ease forwards 1s;
     margin-bottom: 50px; /* Increased spacing below subtext */
     line-height: 1.3; /* Better text spacing */
-    max-width: 600px; /* Restrict width for better alignment */
+    
 }
 
-/* Button Styling (Fixed Width) */
 .btn {
     display: inline-block;
     font-size: 1.2rem; /* Adjust font size */
@@ -220,8 +207,8 @@ nav ul li a:hover {
     color: white;
     background: #dcae1d;
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    animation: to_right 1s ease forwards 1.1s;
 }
 
 /* Button Hover Effect */
@@ -238,25 +225,63 @@ nav ul li a:hover {
     display: flex;
     align-items: center; /* Aligns image with text */
     justify-content: center;
-    height: auto;
+    position: absolute;
+    flex-wrap: wrap;
+    right: 80px;
+    bottom: 0;
+    top: 50px;
+    height: 100%;
+    animation: to_left 1s ease forwards 1.1s;
 }
 
-/* Image Styling */
-.hero-image img {
-    width: 340px; /* Keeps image scalable */
-    object-fit: contain;
-    margin-top: -20px; /* Adjusts alignment with text */
-    padding-top: 0;
-}
-/*Components Unit Styling */
-html {
-    scroll-behavior: smooth;
-    scrollbar-color: #57e2e4;
+@keyframes to_bottom {
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
 }
 
-/* Component Units Section */
-html {
-    scroll-behavior: smooth;
+@keyframes to_right {
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes to_left{
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Component Units Section */
