@@ -21,7 +21,7 @@ header {
     border-bottom: 1px #c2efdd solid;
     position: fixed;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1700px;
     height: 16%;
     top: 0;
     z-index: 99;
@@ -516,6 +516,7 @@ h1 {
 .prev, .next {
     position: absolute;
     top: 50%;
+
     background: rgba(0, 0, 0, 0.6);
     color: white;
     border: none;
@@ -1046,27 +1047,28 @@ h1 {
 /*Our Team*/
 .background {
     position: relative; 
-    padding-bottom: 100px;
+    padding-bottom: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    overflow: hidden;
-    position: relative;  
+    overflow: hidden; 
 }
 
 .background::before {
     content: ""; 
     position: absolute; 
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-image: url('images/KTTBDC_Logo.png');
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     opacity: 0.1; 
     z-index: -1; 
-    max-width: 1200px;
+    /*max-width: 1200px;*/
 }
 
 .content {
@@ -1099,7 +1101,7 @@ h1 {
 }
 
 .team-member {
-    margin: 10px;
+    margin: 5px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -1109,7 +1111,7 @@ h1 {
 
 .team-member.large {
     margin-bottom: 0; 
-    margin-right: 50px; 
+    margin-right: 100px; 
 }
 
 .team-member.large .image-wrapper {
@@ -1186,21 +1188,26 @@ h1 {
 .team-members-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    gap: 10px;
     align-self: flex-start; /* Align grid to top */
 }
 
 /* Class for the wave image */
 .wave-image {
     position: absolute;
-    bottom: -50px;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 300px; /* Adjust height as needed */
+    height: 300px; 
     background-image: url('images/wave.png');
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: bottom;
+    z-index: 0; 
+    pointer-events: none; 
 }
+
+
 /*Partner*/
 .partners-section {
     text-align: center;
@@ -1379,7 +1386,7 @@ button:hover {
 /*footer*/
 .footer-container {
     display: flex;
-    justify-content: space-between;
+    gap: 100px;
     align-items: center;
     background-color:#e6eff6ae;
     padding: 20px;
@@ -1387,6 +1394,11 @@ button:hover {
 .footer-branding {
     display: flex;
     align-items: center;
+    gap: 16px;
+}
+.footer-logo{
+    width: 50px;
+    height: auto;
 }
 .footer-text {
     display: flex;
@@ -1413,8 +1425,14 @@ button:hover {
 .links a {
     text-decoration: none;
     font-family: sans-serif;
-    color: #09323F;
-    margin: 5px 5;
+    font-size: 16px;
+    color: #002855;
+    margin: 2px 0;
+}
+
+.links a:hover {
+    color: #002855;
+    font-weight: 600;
 }
 .social-icons {
     display: flex;
