@@ -9,45 +9,53 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-
-    <header>
-        <div class="header-container">
-            <!-- Logo Section -->
-            <div class="logo-container"> 
+        <header>
+            <div class="header-container">
+              <!-- Logo Section -->
+              <div class="logo-container">
                 <a href="index.html">
-                    <img src="images/KTTBDC_Logo.png" alt="KTTBDC Logo">
-                    <div class="logo-text">
-                    </div>
+                  <img src="images/KTTBDC_Logo.png" alt="KTTBDC Logo">
+                  <div class="logo-text"></div>
                 </a>
-            </div>
-    
-            <!-- Navigation Menu -->
-            <nav>
+              </div>
+          
+              <!-- Hamburger Menu Toggle -->
+              <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+          
+              <!-- Navigation Menu -->
+              <nav>
                 <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about-us">About</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li class="dropdown">
-                        <a href="#">Explore ▼</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#component-units">Component Units</a></li>
-                            <li><a href="#our-goals">Our Goals</a></li>
-                            <li><a href="#our-objectives">Our Objectives</a></li>
-                            <li><a href="#our-services">Our Services</a></li>
-                            <li><a href="#our-team">Our Team</a></li>
-                            <li><a href="#partners">Partners & Collaborators</a></li>
-                        </ul>
-                    </li>
+                  <li><a href="#hero">Home</a></li>
+                  <li><a href="#about-us">About</a></li>
+                  <li><a href="#contact">Contact Us</a></li>
+          
+                  <!-- Desktop-only Explore Dropdown -->
+                  <li class="dropdown desktop-only">
+                    <a href="#">Explore ▼</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#component-units">Component Units</a></li>
+                      <li><a href="#our-goals">Our Goals</a></li>
+                      <li><a href="#our-objectives">Our Objectives</a></li>
+                      <li><a href="#our-services">Our Services</a></li>
+                      <li><a href="#our-team">Our Team</a></li>
+                      <li><a href="#partners">Partners & Collaborators</a></li>
+                    </ul>
+                  </li>
+          
+                  <!-- Mobile-only direct links -->
+                  <li class="mobile-only"><a href="#component-units">Component Units</a></li>
+                  <li class="mobile-only"><a href="#our-goals">Our Goals</a></li>
+                  <li class="mobile-only"><a href="#our-objectives">Our Objectives</a></li>
+                  <li class="mobile-only"><a href="#our-services">Our Services</a></li>
+                  <li class="mobile-only"><a href="#our-team">Our Team</a></li>
+                  <li class="mobile-only"><a href="#partners">Partners & Collaborators</a></li>
                 </ul>
-                
-                <!-- Hamburger Menu Toggle -->
-                <div class="menu-toggle" id="mobile-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
+              </nav>
+            </div>
     </header>
     
 <!-- Hero Section -->
