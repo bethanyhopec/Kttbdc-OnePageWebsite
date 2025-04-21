@@ -3304,9 +3304,9 @@ button:hover {
 }
 
 /* 15 inch and wider screens */
-@media screen and (min-width: 1366px) and (max-width: 1920px) {
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
     header {
-        height: 14%; /* slightly smaller header height */
+        height: 20%; /* slightly smaller header height */
         padding: 10px 40px;
         max-width: 1900px;
     }
