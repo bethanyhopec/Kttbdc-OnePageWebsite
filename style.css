@@ -693,10 +693,8 @@ nav ul li a:hover {
 
     .hero-image,
     .hero-image img {
-        display: flex;
-        z-index: -9999;
-        margin-top: 82%;
-        margin-right: 1%;
+        display: none;
+       
     }
 }
 
