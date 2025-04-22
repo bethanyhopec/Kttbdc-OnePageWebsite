@@ -208,3 +208,30 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const objectives = document.querySelectorAll(".objective");
+    const heading = document.querySelector(".our-objectives h2");
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          el.classList.add("animate");
+  
+          const icon = el.querySelector(".objective-icon");
+          if (icon) {
+            icon.classList.add("animate");
+          }
+  
+          observer.unobserve(el); // run only once per element
+        }
+      });
+    }, {
+      threshold: 0.4, // trigger when 40% of the element is visible
+      rootMargin: "0px 0px -50px 0px" // slightly before full visibility
+    });
+  
+    if (heading) observer.observe(heading);
+    objectives.forEach((obj) => observer.observe(obj));
+  });
