@@ -235,3 +235,22 @@ document.addEventListener("DOMContentLoaded", () => {
     if (heading) observer.observe(heading);
     objectives.forEach((obj) => observer.observe(obj));
   });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            } else {
+                entry.target.classList.remove("visible"); // 👈 allows repeat
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    elementsToAnimate.forEach(el => observer.observe(el));
+});
+
