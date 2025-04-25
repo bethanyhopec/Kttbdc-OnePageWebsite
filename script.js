@@ -123,7 +123,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         submitBtn.textContent = "Sending...";
 
         // Send email using EmailJS
-        emailjs.sendForm('service_r34v9bs', 'template_e0vvbje', this)
+        emailjs.sendForm('service_xdwyy0o', 'template_z3g06ag', this)
             .then(() => {
                 document.getElementById("successMessage").style.display = "block";
                 document.getElementById("contactForm").reset();
