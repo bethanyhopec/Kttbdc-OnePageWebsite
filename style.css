@@ -51,10 +51,12 @@ nav ul {
     margin: 0;
 }
 
-.logo-container img {
-    height: 70px;
+.logo-container img { /* Edited from screen (min-width: 1440px) and (max-width: 1920px) */
+    height: 300px !important;
+    width: 300px;
     margin-left: 20%; 
-    margin-top: 10px; 
+    margin-top: -65px; 
+    margin-bottom: -90px;
 
 }
 
@@ -62,7 +64,7 @@ nav ul {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 40px;
 }
 
 nav ul li {
@@ -235,6 +237,11 @@ nav ul li a:hover {
     top: 50px;
     height: 100%;
     animation: to_left 1s ease forwards 1.1s;
+}
+
+.hero-image img {
+    height: 65%;
+    margin-left: 35%;
 }
 
 @keyframes to_bottom {
@@ -1576,9 +1583,10 @@ h1 {
 
 .about-image img {
     width: 100%;
-    max-width: 450px;
     height: auto;
+    max-width: 450px;
     opacity: 0;
+    margin-bottom: 80px;
     animation: fadeInRight 0.8s ease-out 0.4s forwards;
     transition: transform 0.3s ease;
 }
