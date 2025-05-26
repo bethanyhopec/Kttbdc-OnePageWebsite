@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+    (function() {
+        emailjs.init("NRn4FqkuZXxyxNV4o"); 
+    })();
+</script>
 </head>
 <body>
         <header>
             <div class="header-container">
-              <!-- Logo Section -->
+              <!-- Header Logo-->
               <div class="logo-container">
                 <a href="index.html">
                   <img src="images/WVSU-Logo-updated.png" alt="KTTBDC Logo">
@@ -33,7 +39,7 @@
                   <li><a href="#about-us">About</a></li>
                   <li><a href="#contact">Contact Us</a></li>
           
-                  <!-- Desktop-only Explore Dropdown -->
+                  <!-- Desktop Dropdown -->
                   <li class="dropdown desktop-only">
                     <a href="#">Explore ▼</a>
                     <ul class="dropdown-menu">
@@ -46,7 +52,7 @@
                     </ul>
                   </li>
           
-                  <!-- Mobile-only direct links -->
+                  <!-- Mobile Menu -->
                   <li class="mobile-only"><a href="#component-units">Component Units</a></li>
                   <li class="mobile-only"><a href="#our-goals">Our Goals</a></li>
                   <li class="mobile-only"><a href="#our-objectives">Our Objectives</a></li>
@@ -62,8 +68,8 @@
 <section id = "hero" class="hero">
     <div class="hero-content">
         <h1><span>KTTBDC</span></h1>
-        <p>Knowledge Technology Transfer and Business Development Center</p>
-        <a href="#component-units" class="btn">Discover More</a> <!-- Anchor link -->
+        <p>Commercializing WVSU Innovations. A Support Hub for Researchers & External Partners</p>
+        <a href="#component-units" class="btn">Discover More</a> <!--link to Component Units -->
     </div>
     <div class="hero-image">
         <img src="images\logo_KTTBDC.png" alt="Lightbulb Innovation">
@@ -95,12 +101,13 @@
         </div>
     </div>
 </section>
+
 <!-- ITSO Pop-up -->
 <div id="itso-popup" class="popup popup-itso">
     <h2>About Us</h2>
     <span class="close-btn" onclick="closePopup('itso-popup')">&times;</span>
     <div class="popup-content">
-        <!-- Left Side: Image Slider -->
+        <!--Image Slider -->
         <div class="slider-container">
             <div class="slider">
                 <img src="images/itso/ITSO.png" class="slide active">
@@ -118,7 +125,7 @@
             </div>
         </div>
 
-        <!-- Right Side: Rectangles (Mission & Vision) -->
+        <!--(Mission & Vision) -->
         <div class="right-content">
             <div class="itso">
                 <img src="images/IK.png" alt="Mission">
@@ -132,7 +139,7 @@
             </div>
         </div>
         <div class="text-marquee" 
-            style="--start-position: 50%; --start-position-value: 50%; --end-position-value: -50%;">
+            style="--start-position: 10%; --start-position-value: 10%; --end-position-value: -10%;">
             <span>CREATE. PROTECT. PROMOTE CREATE. PROTECT. PROMOTE CREATE. PROTECT. PROMOTE CREATE. PROTECT. PROMOTE CREATE. PROTECT. PROMOTE</span>
             <span>CREATE. PROTECT. PROMOTE CREATE. PROTECT. PROMOTE CREATE. PROTECT. PROMOTE CREATE. PROTECT. PROMOTE CREATE. PROTECT. PROMOTE</span>
             <span>CREATE. PROTECT. PROMOTE CREATE. PROTECT. PROMOTE CREATE. PROTECT. PROMOTE CREATE. PROTECT. PROMOTE CREATE. PROTECT. PROMOTE</span>
@@ -146,7 +153,7 @@
         <span class="close-btn" onclick="closePopup('ktto-popup')">&times;</span>
 
 
-        <!-- Left Side: Image Slider -->
+        <!--Image Slider -->
         <div class="slider-container">
             <div class="slider">
                 <img src="images/ktto/ktto.png" class="slide active">
@@ -165,7 +172,7 @@
         </div>
 
 
-        <!-- Right Side: Hover Rectangles -->
+        <!-- Hover Mission & Vision -->
         <div class="right-content">
             <div class="ktto">
                 <img src="images/IK.png" alt="Mission">
@@ -192,7 +199,7 @@
     <div class="popup-content">
         <span class="close-btn" onclick="closePopup('binhi-popup')">&times;</span>
        
-        <!-- Left Side: Image Slider -->
+        <!--Image Slider -->
         <div class="slider-container">
             <div class="slider">
                 <img src="images/binhi/Binhi.png" class="slide active">
@@ -211,7 +218,7 @@
             </div>
         </div>
 
-        <!-- Right Side: Mission & Vision -->
+        <!-- Mission & Vision -->
         <div class="right-content">
             <div class="binhi">
                 <img src="images/B.png" alt="Mission">
@@ -265,7 +272,6 @@
         <h2>OUR GOALS</h2>
     </div>
     <div class="goals-container">
-        <!-- First Goal -->
         <div class="goal">
             <div class="goal-content">
                 <div class="goal-box">
@@ -274,7 +280,6 @@
                 <p>To develop and nurture a more scientific, innovative, collaborative, and entrepreneurial culture of WVSU.</p>
             </div>
         </div>
-        <!-- Second Goal -->
         <div class="goal">
             <div class="goal-content">
                 <div class="goal-box">
@@ -291,7 +296,7 @@
     <h2>OUR OBJECTIVES</h2>
     <div class="objectives-container">
         <div class="objective">
-            <p>To harmonize the Innovation and Technology Support Office (ITSO), the BMIH Technology Business Incubator (TBI), and the Knowledge and Technology Transfer Office (KTTO).</p>
+            <p>To harmonize the Innovation and Technology Support Office (ITSO), the BINHI Technology Business Incubator (TBI), and the Knowledge and Technology Transfer Office (KTTO).</p>
             <img class="objective-icon" src="images/icon-obj.1.png" alt="Innovation Support">
         </div>
         <div class="objective">
@@ -362,6 +367,7 @@
         </div>
     </div>
 </section>
+
 <!--Our Team -->
 <section id="our-team" class="our-team animate-on-scroll">
 <div class="background">
@@ -449,7 +455,7 @@
         </div>
     </div>
 </section>
-<!--contact us-->
+
 
 <!-- Contact Us Section -->
 <section id="contact" class="contact-section">
@@ -528,12 +534,6 @@
     </div>
     <div class="copyright">Copyright. All Rights Reserved 2025.</div>
 </footer>
-<!-- Add this before </body> -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-    (function() {
-        emailjs.init("NRn4FqkuZXxyxNV4o"); // Replace with your EmailJS user ID
-    })();
-</script>
+
 </body>
 </html>
