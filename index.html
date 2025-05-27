@@ -8,11 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-    (function() {
-        emailjs.init("NRn4FqkuZXxyxNV4o"); 
-    })();
-</script>
 </head>
 <body>
         <header>
@@ -184,8 +179,8 @@
                 <span>Vision</span>
                 <p class="extra-text">A thriving ecosystem at West Visayas State University (WVSU) that leads in scientific innovation and technology transfer, we empower communities through effective commercialization and contribute advancement.</p>
             </div>
-        </div>
-<div class="text-marquee" 
+         </div>
+        <div class="text-marquee" 
             style="--start-position: 50%; --start-position-value: 50%; --end-position-value: -50%;">
             <span>KNOWLEDGE TECHNOLOGY TRANSFER OFFICE KNOWLEDGE TECHNOLOGY TRANSFER OFFICE KNOWLEDGE TECHNOLOGY TRANSFER OFFICE KNOWLEDGE TECHNOLOGY TRANSFER OFFICE</span>
             <span>KNOWLEDGE TECHNOLOGY TRANSFER OFFICE KNOWLEDGE TECHNOLOGY TRANSFER OFFICE KNOWLEDGE TECHNOLOGY TRANSFER OFFICE KNOWLEDGE TECHNOLOGY TRANSFER OFFICE</span>
@@ -296,31 +291,49 @@
     <h2>OUR OBJECTIVES</h2>
     <div class="objectives-container">
         <div class="objective">
+            <div class="icon-circle">
+                <img class="objective-icon" src="images/icon-obj.1.png" alt="Innovation Support">
+            </div>
             <p>To harmonize the Innovation and Technology Support Office (ITSO), the BINHI Technology Business Incubator (TBI), and the Knowledge and Technology Transfer Office (KTTO).</p>
-            <img class="objective-icon" src="images/icon-obj.1.png" alt="Innovation Support">
         </div>
+
         <div class="objective">
-            <img class="objective-icon" src="images/icon-obj.2.png" alt="Policies and Processes">
+            <div class="icon-circle">
+                <img class="objective-icon" src="images/icon-obj.2.png" alt="Policies and Processes">
+            </div>
             <p>To establish policies and processes engaging technology transfer and R&D commercialization initiatives.</p>
         </div>
+
         <div class="objective">
+            <div class="icon-circle">
+                <img class="objective-icon" src="images/icon-obj.3.png" alt="Strategies and Protocols">
+            </div>
             <p>To implement strategies and protocols to increase the number of commercially viable technologies.</p>
-            <img class="objective-icon" src="images/icon-obj.3.png" alt="Strategies and Protocols">
         </div>
+
         <div class="objective">
-            <img class="objective-icon" src="images/icon-obj.4.png" alt="Expert Team Development">
+            <div class="icon-circle">
+                <img class="objective-icon" src="images/icon-obj.4.png" alt="Expert Team Development">
+            </div>
             <p>To create and develop a team of experts in the field of intellectual property management and R&D commercialization.</p>    
         </div>
+
         <div class="objective">
+            <div class="icon-circle">
+                <img class="objective-icon" src="images/icon-obj.5.png" alt="Academe-Industry Partnership">
+            </div>
             <p>To build a strong academe-industry partnership especially in consulting, research, technology transfer, and commercialization.</p>
-            <img class="objective-icon" src="images/icon-obj.5.png" alt="Academe-Industry Partnership">
         </div>
+
         <div class="objective">
-            <img class="objective-icon" src="images/icon-obj.6.png" alt="Innovation Fund">
+            <div class="icon-circle">
+                <img class="objective-icon" src="images/icon-obj.6.png" alt="Innovation Fund">
+            </div>
             <p>To establish and maintain an innovation fund for research and innovation.</p>    
         </div>
     </div>
 </section>
+
 
 <!-- Our Services Section -->
 <section id="our-services" class="our-services animate-on-scroll">
@@ -489,10 +502,23 @@
                 </div>
             </form>
         </div>
-        <div class="text-container">
-            <h2>Get in Touch</h2>
-            <p>Reach out for inquiries or partnership opportunities.</p>
-            <hr>
+
+        <div class="map-container">
+                <div class="text-container">
+                    <h2>Get in Touch</h2>
+                    <p>Reach out for inquiries or partnership opportunities.</p>
+                    <hr>
+                </div>
+                <iframe 
+                    src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.2832184917306!2d122.55641393183802!3d10.71262464451722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aee515c3b33693%3A0x88c79dab1c0b82e1!2sMagsaysay%20Village%2C%20La%20Paz%2C%20Iloilo%20City%2C%20Iloilo!5e0!3m2!1sen!2sph!4v1748311354322!5m2!1sen!2sph"
+                    width="100%"
+                    height="400"
+                    style="border:0; border-radius: 10px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </div>
     </div>
 </section>
@@ -528,9 +554,20 @@
         </div>
     </div>
     <div class="social-icons">
-        <img src="images/fb.png" alt="Facebook">
-        <img src="images/mail.png" alt="Gmail">
-        <img src="images/contact.png" alt="Phone">
+        <!-- Link to Facebook page -->
+        <a href="https://facebook.com/wvsu.kttbdc" target="_blank">
+            <img src="images/fb.png" alt="Facebook">
+        </a>
+    
+        <!-- Link to Gmail -->
+        <a href="mailto:kttbdc@wvsu.edu.ph">
+            <img src="images/mail.png" alt="Gmail">
+        </a>
+    
+        <!-- Link to phone number -->
+        <a href="tel:+639988860994">
+            <img src="images/contact.png" alt="Phone">
+        </a>
     </div>
     <div class="copyright">Copyright. All Rights Reserved 2025.</div>
 </footer>
