@@ -459,9 +459,9 @@ nav ul li a:hover {
   @media (max-width: 480px) {
 
     .logo-container img {
-        margin-left: -40px;
-        height: 200px;
-        width: 200px;
+        margin-left: 5%;
+        height: 80px;
+        
       }
     .hero-image,
     .hero-image img {
@@ -490,29 +490,6 @@ nav ul li a:hover {
       font-size: 16px;
       margin-top: 200px;
     }
-    .menu-toggle {
-        display: flex;
-        cursor: pointer;
-        position: absolute;
-        padding: 10px 20px;
-        top: 20px;
-        right: 0;
-        z-index: 100;
-    }
-
-    nav ul {
-        display: flex; 
-        flex-direction: column;
-        background: linear-gradient(to bottom, #dcf9ff, #ffffff);
-        width: 60%;
-        position: absolute;
-        top: 0px;
-        right: 0;
-        padding: 10px 20px;
-        z-index: 9999;
-    }
-
-
   }
 
 
