@@ -625,6 +625,15 @@ nav ul li a:hover {
         max-width: 400px;
     }
 
+    
+.logo-container img {
+    height: 100px;
+    width: 100px;
+    margin-left: 10%; 
+    margin-top: -65px; 
+    margin-bottom: -90px;
+
+}
     .menu-toggle {
         display: flex;
         cursor: pointer;
