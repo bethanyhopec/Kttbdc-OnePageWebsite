@@ -468,7 +468,7 @@ nav ul li a:hover {
     .hero-image,
     .hero-image img {
       display: flex;
-      margin-top: 25px;
+      margin-top: 20px;
       margin-left: 260px;
       height: 200px;
       width: 200px;
@@ -483,7 +483,7 @@ nav ul li a:hover {
   
     .hero-content p {
       font-size: 14px;
-      margin-left: 80px;
+      margin-left: 90px;
       width: 200%;
       text-align: center;
       display: flex;
@@ -493,7 +493,7 @@ nav ul li a:hover {
       width: 60%;
       font-size: 16px;
       margin-top: 50px;
-      margin-left: -30px;
+      margin-left: -10px;
     }
   }
 
@@ -1990,7 +1990,7 @@ h1 {
     .our-objectives h2 {
         font-size: 24px;
         margin-bottom: 40px;
-        margin-left: 80px;
+        margin-left: 130px;
     }
 
     .objectives-container {
@@ -2000,7 +2000,7 @@ h1 {
     }
 
     .objective {
-        width: 90%;
+        width: 150%;
         margin: 0 auto;
         padding: 60px 15px 30px;
     }
