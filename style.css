@@ -610,9 +610,8 @@ nav ul li a:hover {
     }
 
     header {
-        height: auto;
-        padding: 10px 20px;
-        width: 100%;
+        height: 70px;
+        width: 80%;
         max-width: 100%;
         margin: 0 auto;
     }
@@ -630,8 +629,8 @@ nav ul li a:hover {
     height: 100px;
     width: 100px;
     margin-left: 10%; 
-    margin-top: -65px; 
-    margin-bottom: -90px;
+    margin-top: -10px; 
+    margin-bottom: 0;
 
 }
     .menu-toggle {
@@ -648,7 +647,7 @@ nav ul li a:hover {
         display: flex; 
         flex-direction: column;
         background: linear-gradient(to bottom, #dcf9ff, #ffffff);
-        width: 100%;
+        width: 60%;
         position: absolute;
         top: 0px;
         right: 0;
@@ -658,9 +657,10 @@ nav ul li a:hover {
 
     .hero {
         background: radial-gradient(circle at top, #ffffff, #c4e0e574);
-        width: 100%;
-        max-width: 100%;
-        margin-top: 160px;
+        width: 50%;
+        max-width: 50%;
+        margin-left: 100%;
+        margin-top: 110px;
         display: flex;
         align-items: center;
         text-align: center;
@@ -670,33 +670,35 @@ nav ul li a:hover {
     }
 
     .hero-content {
-        width: 100%;
-        max-width: 400px;
+        width: 60%;
+        max-width: 300px;
         overflow-x: hidden;
     }
 
     .hero-content h1 {
-        font-size: 90px; /* Down from 80px to fit on mobile */
-        font-weight: 900;
+        font-size:60px; 
+        font-weight: 800;
         margin: 10px auto;
         margin-left: 10px;
         overflow-x: hidden;
     }
 
     .hero-content p {
-        font-size: 40px;
+        font-size: 15px;
         line-height: 1.5;
         width: 100%;
         margin: 10px 0;
-        margin-left: 10px;
-        overflow-x: hidden;
+        text-align: center;
+        margin-left: 60px;
+
     }
 
     .btn {
-        width: 60%;
-        font-size: 20px;
+        width: 40%;
+        font-size: 10px;
         padding: 10px 20px;
         margin-top: 20px;
+        margin-left: 5px;
     }
 
     .hero-image,
