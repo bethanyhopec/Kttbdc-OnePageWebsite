@@ -459,15 +459,19 @@ nav ul li a:hover {
   @media (max-width: 480px) {
 
     .logo-container img {
-        margin-left: 5%;
-        height: 80px;
+        margin-left: -50px;
+        height: 200px;
+        width: 200px;
+        margin-top: -70px;
         
       }
     .hero-image,
     .hero-image img {
       display: flex;
-      margin-top: 90px;
-      margin-left: 90px;
+      margin-top: 30px;
+      margin-left: 100px;
+      height: 200px;
+      width: 200px;
     }
   
     .hero-content h1 {
@@ -486,7 +490,7 @@ nav ul li a:hover {
     }
   
     .btn {
-      width: 40%;
+      width: 60%;
       font-size: 16px;
       margin-top: 200px;
     }
@@ -1991,7 +1995,7 @@ h1 {
     .objectives-container {
         grid-template-columns: 1fr;
         gap: 20px;
-        margin-left: 80px;
+        margin-left: 90px;
     }
 
     .objective {
