@@ -228,3 +228,14 @@ document.getElementById("contactForm").addEventListener("submit", function (even
             });
     }
 });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', function () {
+      menuToggle.classList.toggle('open');
+      navMenu.classList.toggle('active');
+    });
+  });
+
