@@ -238,6 +238,7 @@ nav ul li a:hover {
     margin-left: 35%;
 }
 
+/* Transition Effect */
 @keyframes to_bottom {
     0%{
         transform: translateY(-50px);
@@ -286,7 +287,7 @@ nav ul li a:hover {
         opacity: 1;
         transform: translateY(0);
     }
-}/*  Base responsive styles */
+}
 
 @media (max-width: 1024px) {
     .header-container {
@@ -516,7 +517,7 @@ nav ul li a:hover {
     transform: translateY(0);
 }
 
-
+/* Components Unit */
 .background-container {
     background: linear-gradient(135deg, #ffffff 20%, #c2efdd 100%);
     position: absolute;
@@ -1548,6 +1549,7 @@ h1 {
     }
 }
 
+/* Transition Effect */
 @keyframes aboutIn {
     from {
         opacity: 0;
@@ -1826,6 +1828,7 @@ h1 {
     }
 }
 
+/* Transition Effect */
 @keyframes float {
     0% {
         transform: translateY(0);
@@ -2232,6 +2235,7 @@ our-services.animate-on-scroll {
     }
 }
 
+/* Transition Effect */
 @keyframes servicesZoomFade {
     from {
         opacity: 0;
@@ -2581,6 +2585,7 @@ our-services.animate-on-scroll {
       }
     }
 
+    /* Transition Effect */
     @keyframes teamFadeSlide {
         from {
             opacity: 0;
@@ -2594,20 +2599,20 @@ our-services.animate-on-scroll {
         }
     }
 
-@keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
+    @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
 
-@keyframes slideUpFadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    @keyframes slideUpFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
     }
 
 /*Partner*/
