@@ -1246,9 +1246,9 @@ media (max-width: 375px){
 @media (max-width: 375px) {
     .popup {
         width: 65%;
-        height: 60%;
+        height: 50%;
         padding: 6px;
-        margin-left: -70px;
+        margin-left: -65px;
     }
 
     .popup h2,
@@ -1280,6 +1280,7 @@ media (max-width: 375px){
         width: 130px;
         height: 140px;
         font-size: 11px;
+        margin-top: -50px;
     }
 
     .itso img, .ktto img, .binhi img {
