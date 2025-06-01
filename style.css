@@ -456,13 +456,14 @@ nav ul li a:hover {
     }
   }
   
-  @media (max-width: 480px) {
+  @media (max-width: 375px) {
 
     .logo-container img {
         margin-left: -40px;
-        height: 200px;
-        width: 200px;
-        margin-top: -70px;
+        height: 120px;
+        width: 120px;
+        margin-top: -90px;
+        margin-bottom: -60px;
         
       }
     .hero-image,
