@@ -482,7 +482,7 @@ nav ul li a:hover {
     .hero-image img {
       display: flex;
       margin-top: 20px;
-      margin-left: 100px;
+      margin-left: 130px;
       height: 200px;
       width: 200px;
     }
@@ -490,13 +490,13 @@ nav ul li a:hover {
     .hero-content h1 {
       font-size: 60px;
       font-weight: 900;
-      margin-left: -90px;
+      margin-left: -110px;
       margin-top: 150px;
     }
   
     .hero-content p {
       font-size: 14px;
-      margin-left: 30px;
+      margin-left: 40px;
       width: 200%;
       text-align: center;
       display: flex;
@@ -506,7 +506,7 @@ nav ul li a:hover {
       width: 60%;
       font-size: 16px;
       margin-top: 50px;
-      margin-left: -100px;
+      margin-left: -110px;
     }
   }
 
