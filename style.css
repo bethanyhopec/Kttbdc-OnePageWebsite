@@ -482,6 +482,7 @@ nav ul li a:hover {
     .hero-image img {
       display: flex;
       margin-top: 20px;
+      margin-bottom: 30px;
       margin-left: 130px;
       height: 200px;
       width: 200px;
@@ -682,13 +683,13 @@ h1 {
 
 
 /* ===== 480px and below ===== */
-@media (max-width: 480px){
+@media (max-width: 375px){
 
     .background-container {
         background: linear-gradient(135deg, #ffffff 20%, #c2efdd 100%);
         position: absolute;
-        width: 180%;
-        max-width: 480px;
+        width: 100%;
+        max-width: 375px;
         height: 25vh;
         margin-left: 0;
         background: url('images/components.png') no-repeat center center/cover;
@@ -699,7 +700,7 @@ h1 {
     .content {
         margin-top: 50px;
         padding: 0 10px;
-        margin-left: 15%;
+        margin-left: 10px;
     }
 
     .content h1 {
@@ -719,7 +720,7 @@ h1 {
     .logo-card {
         width: 100%;
         max-width: 300px;
-        margin-left: 5%;
+        margin-left: -5%;
     }
 
     .logo-card img {
