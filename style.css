@@ -1251,7 +1251,7 @@ h1 {
 }
 
 /* Extra small screens: Mobile Portrait */
-@media (min-width:360px) and (max-width: 480px) {
+@media (max-width:375px)  {
     .popup {
         width: 100%;
         height: 60%;
@@ -1342,7 +1342,7 @@ h1 {
 
 /* ABOUT US Title */
 .about-container {
-    background-color: rgba(255, 255, 255, 0.5); /* semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.5); 
     padding: 40px;
     border-radius: 16px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
@@ -1365,7 +1365,7 @@ h1 {
     justify-content: center;
     width: 100%;
     margin-left: 125%;
-    opacity: 0; /* Start hidden for animation */
+    opacity: 0; 
     animation: fadeInUp 0.8s ease-out 0.2s forwards;
 }
 
@@ -1374,7 +1374,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: row-reverse; /* Image on the left, text on the right */
+    flex-direction: row-reverse; 
     max-width: 1200px;
     width: 100%;
 }
@@ -1522,7 +1522,7 @@ h1 {
 }
 
 /* ====================== 480px and below ====================== */
-@media (min-width:360px) and (max-width: 480px) {
+@media (min-width:375px) {
     .about-us {
         background-image: linear-gradient(to bottom left, #cde6f8ae, #ffffff);
         width: 180%;
