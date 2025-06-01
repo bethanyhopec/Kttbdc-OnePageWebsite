@@ -1514,7 +1514,7 @@ media (max-width: 375px){
 }
 
 /* ====================== 480px and below ====================== */
-@media (min-width:375px) {
+@media (max-width:375px) {
     .about-us {
         background-image: linear-gradient(to bottom left, #cde6f8ae, #ffffff);
         width: 100%;
