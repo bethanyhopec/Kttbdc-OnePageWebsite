@@ -1245,10 +1245,10 @@ media (max-width: 375px){
 /* Extra small screens: Mobile Portrait */
 @media (max-width: 375px) {
     .popup {
-        width: 70%;
+        width: 60%;
         height: 60%;
         padding: 6px;
-        margin-left: -60px;
+        margin-left: -70px;
     }
 
     .popup h2,
