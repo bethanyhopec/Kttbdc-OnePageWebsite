@@ -2517,7 +2517,7 @@ our-services.animate-on-scroll {
 @media (max-width:375px) {
     .background {
         padding-bottom: 60px;
-        width: 100%;
+        width: 180%;
         max-width: 375px;
         background-size: cover;
         background-position: center;
@@ -2539,7 +2539,7 @@ our-services.animate-on-scroll {
         font-size: 24px;
         text-align: center;
         margin-bottom: 20px;
-        margin-left: 0px;
+        margin-left: -60px;
       }
     
       .team-members-grid {
@@ -2548,25 +2548,24 @@ our-services.animate-on-scroll {
         justify-content: center;
         gap: 10px;
         width: 100%;
-        margin-left: 50px;
+        margin-left: 5%;
       }
     
       .team-member {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 160px;
+        width: 140px;
       }
     
       .team-member.large {
         width: 160px;
-        margin-left: 100px;
-
+        margin-left: 15%;
       }
     
       .team-member .image-wrapper {
-        width: 160px;
-        height: 220px;
+        width: 100px;
+        height: 130px;
       }
     
       .team-member.large .image-wrapper {
@@ -2744,10 +2743,10 @@ our-services.animate-on-scroll {
     }
 
     .partners-section h2 {
-        font-size: 20px;
+        font-size: 24px;
         margin-top: 40px;
         margin-left: 2%;
-        width: 90%;
+        width: 100%;
     }
     .carousel-container {
         width: 100%;
@@ -2803,6 +2802,7 @@ our-services.animate-on-scroll {
 }
 
 .text-container h2 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     font-weight: bold;
     color: #004996;
@@ -3009,8 +3009,6 @@ button:hover {
         width: 100%;
         max-width: 100%;
         margin-left: -2px;
-        display: flex;
-        flex-direction: column-reverse;
        
     }
 
@@ -3260,24 +3258,53 @@ button:hover {
         font-size: 56px; 
         padding: 0 40px;
     }
+    /* Our Team */
 
-}
-    nav ul {
-        gap: 30px; 
-
-    .logo-container img {
-        height: 80px; 
-        margin-left: 15%;
+    .background::before{
+        margin-left: 20%;
     }
-    .logo-container img {
-        height: 80px;
-        margin-left: 0; 
+    .team-heading{
+        font-size: 45px;
+        text-align: center;
+        margin-left: -40px;
+        margin-bottom: 30px;
+        position: relative;
+    }
+    .wave-image {
+        height: 200px;
+        
+    }
+    /* Footer */
+    .footer-container {
+        gap: 140px;
+        padding: 40px 80px;
     }
 
-    .header-container {
-        max-width: 1440px;
-        margin: 0 auto;
-        padding: 0 40px;
+    .footer-logo {
+        width: 70px;
+    }
+
+    .footer-text .title {
+        font-size: 2.4rem;
+    }
+
+    .footer-text .subtitle {
+        font-size: 1rem;
+    }
+
+    .links a {  
+        font-size: 14.5px;
+    }
+
+    .social-icons img {
+        width: 40px;
+        height: 40px;
+        margin: 0 12px;
+    }
+
+    .copyright {
+        font-size: 16px;
+        padding: 16px;
     }
 
     /* Hero Image */
@@ -3389,38 +3416,7 @@ button:hover {
         max-width: 230px !important;
     }
 
-    /* Our Team */
-    .team-heading{
-        font-size: 45px;
-        text-align: center;
-        margin-left: -40px;
-        margin-bottom: 30px;
-        position: relative;
-    }
-    /* Our Objectives Section */
-    .objectives-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        max-width: 1100px;
-        margin:0 auto;
-        margin-bottom: 10%;
-    }
-    .objective p {
-        font-size: 20px !important;
-        color: #396161;
-        text-align: justify;
-        width: 70%;
-        margin: 0;
-        flex: 1; 
-    }
-    .objective-icon {
-        width: 100px;
-        height: 100px;
-    }
-
-        /* Class for the wave image */
+    /* Class for the wave image */
     .wave-image  { 
         position: absolute !important;
         bottom: -50px;
@@ -3439,38 +3435,4 @@ button:hover {
         margin-left: 19%;
         margin-top: 3%
     }
-
-    /* Footer */
-    .footer-container {
-        gap: 140px;
-        padding: 40px 80px;
-    }
-
-    .footer-logo {
-        width: 70px;
-    }
-
-    .footer-text .title {
-        font-size: 2.4rem;
-    }
-
-    .footer-text .subtitle {
-        font-size: 1rem;
-    }
-
-    .links a {  
-        font-size: 14.5px;
-    }
-
-    .social-icons img {
-        width: 40px;
-        height: 40px;
-        margin: 0 12px;
-    }
-
-    .copyright {
-        font-size: 16px;
-        padding: 16px;
-    }
-    
 }
