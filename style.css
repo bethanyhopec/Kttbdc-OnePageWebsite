@@ -2509,7 +2509,7 @@ our-services.animate-on-scroll {
 @media (max-width:375px) {
     .background {
         padding-bottom: 60px;
-        width: 100%;
+        width: 180%;
         max-width: 375px;
         background-size: cover;
         background-position: center;
@@ -2531,7 +2531,7 @@ our-services.animate-on-scroll {
         font-size: 24px;
         text-align: center;
         margin-bottom: 20px;
-        margin-left: 0px;
+        margin-left: -60px;
       }
     
       .team-members-grid {
@@ -2540,25 +2540,24 @@ our-services.animate-on-scroll {
         justify-content: center;
         gap: 10px;
         width: 100%;
-        margin-left: 50px;
+        margin-left: 5%;
       }
     
       .team-member {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 160px;
+        width: 140px;
       }
     
       .team-member.large {
         width: 160px;
-        margin-left: 100px;
-
+        margin-left: 15%;
       }
     
       .team-member .image-wrapper {
-        width: 160px;
-        height: 220px;
+        width: 100px;
+        height: 130px;
       }
     
       .team-member.large .image-wrapper {
@@ -2736,10 +2735,10 @@ our-services.animate-on-scroll {
     }
 
     .partners-section h2 {
-        font-size: 20px;
+        font-size: 24px;
         margin-top: 40px;
         margin-left: 2%;
-        width: 90%;
+        width: 100%;
     }
     .carousel-container {
         width: 100%;
@@ -2795,6 +2794,7 @@ our-services.animate-on-scroll {
 }
 
 .text-container h2 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     font-weight: bold;
     color: #004996;
@@ -3001,8 +3001,6 @@ button:hover {
         width: 100%;
         max-width: 100%;
         margin-left: -2px;
-        display: flex;
-        flex-direction: column-reverse;
        
     }
 
