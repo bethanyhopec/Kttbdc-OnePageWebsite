@@ -457,46 +457,60 @@ nav ul li a:hover {
     }
   }
   
-  @media (max-width: 480px) {
-
+  @media (max-width: 375px) {
     .logo-container img {
-        margin-left: -40px;
-        height: 200px;
-        width: 200px;
-        margin-top: -70px;
+        margin-left: -30px;
+        height: 120px;
+        width: 120px;
+        margin-top: -90px;
+        margin-bottom: -60px;
         
       }
-    .hero-image,
-    .hero-image img {
-      display: flex;
-      margin-top: 20px;
-      margin-left: 260px;
-      height: 200px;
-      width: 200px;
+      header {
+        height: auto;
+        width: 375px;
+      
+      }
+
+      .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .hero-image,
+      .hero-image img {
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        margin-left: 130px;
+        height: 200px;
+        width: 200px;
+      }
+    
+      .hero-content h1 {
+        font-size: 60px;
+        font-weight: 900;
+        margin-left: -110px;
+        margin-top: 150px;
+      }
+    
+      .hero-content p {
+        font-size: 14px;
+        margin-left: 40px;
+        width: 200%;
+        text-align: center;
+        display: flex;
+      }
+    
+      .btn {
+        width: 60%;
+        font-size: 16px;
+        margin-top: 50px;
+        margin-left: -110px;
+      }
     }
   
-    .hero-content h1 {
-      font-size: 90px;
-      font-weight: 900;
-      margin-left: -10px;
-      margin-top: 150px;
-    }
   
-    .hero-content p {
-      font-size: 14px;
-      margin-left: 90px;
-      width: 200%;
-      text-align: center;
-      display: flex;
-    }
-  
-    .btn {
-      width: 60%;
-      font-size: 16px;
-      margin-top: 50px;
-      margin-left: -10px;
-    }
-  }
 
 
 
@@ -669,13 +683,13 @@ h1 {
 
 
 /* ===== 480px and below ===== */
-@media (max-width: 480px){
+media (max-width: 375px){
 
     .background-container {
         background: linear-gradient(135deg, #ffffff 20%, #c2efdd 100%);
         position: absolute;
-        width: 180%;
-        max-width: 480px;
+        width: 100%;
+        max-width: 375px;
         height: 25vh;
         margin-left: 0;
         background: url('images/components.png') no-repeat center center/cover;
@@ -686,7 +700,7 @@ h1 {
     .content {
         margin-top: 50px;
         padding: 0 10px;
-        margin-left: 15%;
+        margin-left: 10px;
     }
 
     .content h1 {
@@ -706,7 +720,7 @@ h1 {
     .logo-card {
         width: 100%;
         max-width: 300px;
-        margin-left: 5%;
+        margin-left: -5%;
     }
 
     .logo-card img {
@@ -1114,14 +1128,6 @@ h1 {
     animation: scroll-left 12s linear infinite loop;
     font-family: sans-serif;
 }
-@keyframes scroll-left {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
 /*Popups*/
 
 /* Medium screens: Tablets */
@@ -1508,11 +1514,11 @@ h1 {
 }
 
 /* ====================== 480px and below ====================== */
-@media (min-width:360px) and (max-width: 480px) {
+@media (min-width:375px) {
     .about-us {
         background-image: linear-gradient(to bottom left, #cde6f8ae, #ffffff);
-        width: 180%;
-        max-width: 480px;
+        width: 100%;
+        max-width: 375px;
         padding-left: 3px;
         margin-left: 0;
     }
@@ -1520,7 +1526,7 @@ h1 {
     .about-container {
         gap: 10px;
         width: 100%;
-        max-width: 480px;
+        max-width: 375px;
         padding-left: 10%;
         padding-right: 10%;
         margin-left: 7%;
@@ -1539,7 +1545,7 @@ h1 {
     }
 
     .about-image img {
-        max-width: 480px;
+        max-width: 375px;
         margin-bottom: -10%;
     }
 
@@ -1547,6 +1553,7 @@ h1 {
         font-size: 24px;
     }
 }
+
 
 /* Transition Effect */
 @keyframes aboutIn {
@@ -1826,6 +1833,7 @@ h1 {
         margin-top: 10px;
     }
 }
+
 
 /* Transition Effect */
 @keyframes float {
@@ -2218,8 +2226,8 @@ our-services.animate-on-scroll {
     }
 
     .service {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
     }
 
     .service-front img {
